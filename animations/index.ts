@@ -1,0 +1,1 @@
+export { default as TextMarquee } from './text-marquee';
