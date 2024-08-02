@@ -1,9 +1,12 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
+import { Footer, Menu } from "@/components";
+
 export const metadata: Metadata = {
 	title: "Bella",
 	description: "Bella Resume",
 };
+
 export default function RootLayout({
 	children,
 }: {
@@ -11,7 +14,11 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body>{children}</body>
+			<body>
+				<Menu />
+				{children}
+				<Footer />
+			</body>
 		</html>
 	);
 }
