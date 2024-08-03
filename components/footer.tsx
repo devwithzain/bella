@@ -1,7 +1,7 @@
-import { pin } from "@/public";
-import { Facebook, Instagram, MoveRight, Pin } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
+import { pin } from "@/public";
+import Image from "next/image";
+import { Facebook, Instagram, MoveRight } from "lucide-react";
 
 export default function Footer() {
 	return (
@@ -32,7 +32,7 @@ export default function Footer() {
 							</Link>
 						</div>
 					</div>
-					<div className="flex flex-col gap-10">
+					<div className="flex flex-col gap-6">
 						<div className="flex flex-col gap-4">
 							<h1 className="text-black text-3xl font-bold font-PlayfairDisplay leading-[50px]">
 								Newsletter
@@ -42,8 +42,8 @@ export default function Footer() {
 								className="text-black text-2xl font-normal font-Poppins">
 								Subscribe to get updates
 							</Link>
-							<div className="w-full flex flex-col border-b border-black">
-								<h1 className="text-black text-sm font-Poppins">
+							<div className="w-full flex flex-col border-b border-black gap-2">
+								<h1 className="text-black text-md font-Poppins">
 									Enter your email
 								</h1>
 								<input
@@ -52,9 +52,9 @@ export default function Footer() {
 								/>
 							</div>
 						</div>
-						<div className="flex items-center relative">
-							<div className="w-24 h-24 rounded-full bg-[#DD6013]" />
-							<div className="flex items-center gap-2 absolute left-[30px]">
+						<div className="flex items-center relative group">
+							<div className="w-16 h-16 rounded-full bg-[#DD6013] group-hover:w-full transition-all duration-200 ease-linear" />
+							<div className="flex items-center gap-2 absolute left-[20px]">
 								<Link
 									href="/"
 									className="text-black text-[24px] font-medium font-PlayfairDisplay">

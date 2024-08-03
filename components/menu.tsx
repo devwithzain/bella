@@ -75,7 +75,7 @@ export default function Menu() {
 
 	return (
 		<>
-			<nav className="fixed w-full flex justify-between items-center h-[8vh] px-[32px] z-[9999] backdrop-blur-sm">
+			<nav className="fixed w-full flex justify-between items-center h-[10vh] px-[32px] z-[9999] backdrop-blur-sm">
 				<div>
 					<p className="text-[20px] sm:text-[16px] xm:text-[16px] font-BananasFont">
 						@bella
@@ -89,7 +89,7 @@ export default function Menu() {
 					</Link>
 				</div>
 				<div
-					className="flex bg-[#DD6013] w-4 h-4 p-[30px] items-center justify-center rounded-full cursor-pointer"
+					className="flex bg-[#DD6013] p-[15px] items-center justify-center rounded-full cursor-pointer"
 					onClick={toggleMenu}>
 					<button
 						className={`flex justify-center items-center bg-[#ffffff00] rounded-[4px] outline-none h-[20px] w-[20px] border-none transition-all duration-[0.25s] ease-out cursor-pointer before:content-[""] before:w-[35px] xm:before:w-[25px] sm:before:w-[25px] xm:after:w-[25px] sm:after:w-[25px] before:h-[2px] before:absolute before:bg-white before:will-change-transform before:-translate-y-[3px] after:content-[""] after:w-[35px] after:h-[2px] after:absolute after:bg-white after:will-change-transform after:translate-y-[3px] before:transition-all before:duration-[0.3s] before:ease-out after:transition-all after:duration-[0.3s] after:ease-out ${

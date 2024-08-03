@@ -14,7 +14,7 @@
 
 @font-face {
 	src: url("../font/Poppins.ttf");
-	font-family: PlayfairDisplay;
+	font-family: Poppins;
 }
 
 body::-webkit-scrollbar {
