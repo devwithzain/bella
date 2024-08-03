@@ -4,7 +4,7 @@ import { TextMarquee } from "@/animations";
 
 export default function Hero() {
 	return (
-		<div className="w-full h-screen">
+		<div className="w-full h-screen padding-x">
 			<div className="w-full h-full flex items-center justify-center flex-col gap-5">
 				<div className="flex items-center gap-3">
 					<h1 className="text-[#141313] text-[288px] font-normal uppercase leading-[180px] font-BananasFont">
