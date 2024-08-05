@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
-import { Hero, HorizontalSlider } from "@/components";
+import { Hero, HorizontalSlider, Information, Portfolio } from "@/components";
 
 export default function App() {
 	useEffect(() => {
@@ -17,6 +17,8 @@ export default function App() {
 	return (
 		<>
 			<Hero />
+			<Information />
+			<Portfolio />
 			<HorizontalSlider />
 		</>
 	);

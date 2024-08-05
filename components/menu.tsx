@@ -2,13 +2,17 @@
 import gsap from "gsap";
 import Link from "next/link";
 import { menuItem } from "@/constants";
+import { navVariants } from "@/motion";
 import { usePathname } from "next/navigation";
 import CSSRulePlugin from "gsap/CSSRulePlugin";
 import { useEffect, useRef, useState } from "react";
+import { useMotionValueEvent, useScroll, motion } from "framer-motion";
 
 export default function Menu() {
 	const pathname = usePathname();
+	const { scrollY } = useScroll();
 	const [isOpen, setIsOpen] = useState(false);
+	const [hidden, setHidden] = useState(false);
 	const timelineRef = useRef<gsap.core.Timeline>();
 	const toggleButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -73,9 +77,21 @@ export default function Menu() {
 		}
 	};
 
+	useMotionValueEvent(scrollY, "change", (latest) => {
+		const previous = scrollY.getPrevious();
+		if (previous && latest > previous) {
+			setHidden(true);
+		} else {
+			setHidden(false);
+		}
+	});
+
 	return (
 		<>
-			<nav className="fixed w-full flex justify-between items-center h-[10vh] px-[32px] z-[9999] backdrop-blur-sm">
+			<motion.nav
+				className="fixed top-0 left-0 w-full flex justify-between items-center h-[10vh] px-[32px] z-[9999] backdrop-blur-sm"
+				variants={navVariants}
+				animate={hidden ? "hidden" : "vissible"}>
 				<div>
 					<p className="text-[20px] sm:text-[16px] xm:text-[16px] font-BananasFont">
 						@bella
@@ -100,7 +116,7 @@ export default function Menu() {
 						ref={toggleButtonRef}
 					/>
 				</div>
-			</nav>
+			</motion.nav>
 			<div
 				className="fixed top-0 left-0 w-full h-screen flex bg-primary will-change-transform z-[999]"
 				style={{
