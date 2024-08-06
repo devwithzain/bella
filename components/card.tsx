@@ -1,52 +1,146 @@
 import Image from "next/image";
-import { sliderItem } from "@/constants";
+import {
+	afterEffect,
+	autodesk,
+	illustration,
+	indesign,
+	photoshop,
+} from "@/public";
 
 export default function Card() {
 	return (
 		<>
-			{sliderItem.map((item) => (
-				<div
-					key={item.id}
-					className="h-full w-[1000px] relative bg-[#1F201D]">
-					<div className="w-full h-full absolute inset-0 z-10 flex items-start flex-col border-l border-[#867D71] p-14 gap-6">
-						<div className="w-full flex items-center justify-between gap-2">
-							<h1 className="text-[80px] font-BananasFont uppercase text-[#DBCAB6]">
-								{item.id}.
+			<div className="h-full w-full relative shrink-0 bg-primary">
+				<div className="w-full h-full absolute inset-0 z-10 flex justify-between">
+					<div className="w-full h-full flex items-center justify-between">
+						<div className="w-full h-full items-end p-10 flex flex-1">
+							<h1 className="text-[120px] font-BananasFont font-extrabold uppercase text-[#1F201D] leading-none">
+								My <br /> Skills
 							</h1>
-							<Image
-								src={item.src}
-								alt="seamless"
-								width={100}
-								height={100}
-							/>
 						</div>
-						{item.id == 1 && (
-							<h1 className="text-[60px] font-BananasFont uppercase text-[#DBCAB6] leading-none">
-								Seamless, <br /> Responsive <br /> Supply Chain and <br />
-								Distribution <br />
-								Network
-							</h1>
-						)}
-						{item.id == 2 && (
-							<h1 className="text-[60px] font-BananasFont uppercase text-[#DBCAB6] leading-none">
-								Elevating <br /> Everyday <br /> Products with <br /> Renewable{" "}
-								<br /> Materials
-							</h1>
-						)}
-						{item.id == 3 && (
-							<h1 className="text-[60px] font-BananasFont uppercase text-[#DBCAB6] leading-none">
-								About <br /> MeAward-Winning <br /> INNOVATION
-							</h1>
-						)}
-						<p className="text-[18px] font-Poppins text-[#867D71]">
-							{item.para}
-						</p>
-						<button className="text-[16px] font-Poppins text-[#DD6013]">
-							{item.btn}
-						</button>
+						<div className="w-full h-full p-10 flex justify-center flex-1 items-center">
+							<div className="w-[350px] h-[350px] rounded-full border-4 border-black flex items-center justify-center bg-[#EBDDC6]">
+								<Image
+									src={autodesk}
+									alt="Image"
+									width={150}
+									height={150}
+								/>
+							</div>
+						</div>
+						<div className="w-full h-full p-10 flex flex-1 items-start">
+							<div className="flex flex-col items-center">
+								<h1 className="text-[#2E2E2E]/20 text-[232.009px] font-extrabold leading-none  -mb-10">
+									01
+								</h1>
+								<h1 className="text-[120px] font-BananasFont font-extrabold uppercase text-[#1F201D] leading-none">
+									Fusion <br /> 360
+								</h1>
+							</div>
+						</div>
 					</div>
 				</div>
-			))}
+			</div>
+			<div className="w-[60%] h-full flex-col flex items-center justify-between bg-primary shrink-0">
+				<div className="w-full h-full flex items-center justify-center flex-col gap-4">
+					<div className="w-[350px] h-[350px] rounded-full border-4 border-black flex items-center justify-center bg-[#EBDDC6]">
+						<Image
+							src={afterEffect}
+							alt="Image"
+							width={200}
+							height={200}
+						/>
+					</div>
+					<div className="flex flex-col items-center">
+						<h1 className="text-[#2E2E2E]/20 text-[232.009px] font-extrabold leading-none  -mb-10">
+							02
+						</h1>
+						<h1 className="text-[120px] font-BananasFont font-extrabold uppercase text-[#1F201D] leading-none">
+							After Effect
+						</h1>
+					</div>
+				</div>
+			</div>
+			<div className="w-[60%] h-full flex-col flex items-center justify-between bg-primary shrink-0">
+				<div className="w-full h-full flex items-center justify-center flex-col gap-4">
+					<div className="flex flex-col items-center">
+						<h1 className="text-[#2E2E2E]/20 text-[232.009px] font-extrabold leading-none  -mb-10">
+							03
+						</h1>
+						<h1 className="text-[120px] font-BananasFont font-extrabold uppercase text-[#1F201D] leading-none">
+							Illustrator
+						</h1>
+					</div>
+					<div className="w-[350px] h-[350px] rounded-full border-4 border-black flex items-center justify-center bg-[#EBDDC6]">
+						<Image
+							src={illustration}
+							alt="Image"
+							width={200}
+							height={200}
+						/>
+					</div>
+				</div>
+			</div>
+			<div className="w-[60%] h-full flex-col flex items-center justify-between bg-primary shrink-0">
+				<div className="w-full h-full flex items-center justify-center flex-col gap-4">
+					<div className="w-[350px] h-[350px] rounded-full border-4 border-black flex items-center justify-center bg-[#EBDDC6]">
+						<Image
+							src={photoshop}
+							alt="Image"
+							width={200}
+							height={200}
+						/>
+					</div>
+					<div className="flex flex-col items-center">
+						<h1 className="text-[#2E2E2E]/20 text-[232.009px] font-extrabold leading-none  -mb-10">
+							04
+						</h1>
+						<h1 className="text-[120px] font-BananasFont font-extrabold uppercase text-[#1F201D] leading-none">
+							Phtoshop
+						</h1>
+					</div>
+				</div>
+			</div>
+			<div className="w-[60%] h-full flex-col flex items-center justify-between bg-primary shrink-0">
+				<div className="w-full h-full flex items-center justify-center flex-col gap-4">
+					<div className="flex flex-col items-center">
+						<h1 className="text-[#2E2E2E]/20 text-[232.009px] font-extrabold leading-none  -mb-10">
+							05
+						</h1>
+						<h1 className="text-[120px] font-BananasFont font-extrabold uppercase text-[#1F201D] leading-none">
+							Indesign
+						</h1>
+					</div>
+					<div className="w-[350px] h-[350px] rounded-full border-4 border-black flex items-center justify-center bg-[#EBDDC6]">
+						<Image
+							src={indesign}
+							alt="Image"
+							width={200}
+							height={200}
+						/>
+					</div>
+				</div>
+			</div>
+			<div className="w-[60%] h-full flex-col flex items-center justify-between bg-primary shrink-0">
+				<div className="w-full h-full flex items-center justify-center flex-col gap-4">
+					<div className="w-[350px] h-[350px] rounded-full border-4 border-black flex items-center justify-center bg-[#EBDDC6]">
+						<Image
+							src={photoshop}
+							alt="Image"
+							width={200}
+							height={200}
+						/>
+					</div>
+					<div className="flex flex-col items-center">
+						<h1 className="text-[#2E2E2E]/20 text-[232.009px] font-extrabold leading-none -mb-10">
+							06
+						</h1>
+						<h1 className="text-[120px] font-BananasFont font-extrabold uppercase text-[#1F201D] leading-none">
+							SoldWorks
+						</h1>
+					</div>
+				</div>
+			</div>
 		</>
 	);
 }

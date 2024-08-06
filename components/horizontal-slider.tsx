@@ -9,16 +9,16 @@ export default function HorizontalScrollCarousel() {
 		target: targetRef,
 	});
 
-	const x = useTransform(scrollYProgress, [0, 1], ["0%", "-49%"]);
+	const x = useTransform(scrollYProgress, [0, 1], ["0%", "-300%"]);
 
 	return (
 		<section
 			ref={targetRef}
-			className="relative h-[300vh] bg-[#1F201D]">
+			className="relative h-[300vh]">
 			<div className="sticky top-0 flex h-screen items-center overflow-hidden">
 				<motion.div
 					style={{ x }}
-					className="flex h-full">
+					className="w-full flex h-full">
 					<Card />
 				</motion.div>
 			</div>
