@@ -1,4 +1,4 @@
-import { elevating, innovation, seamless } from "@/public";
+import { bookClub, expos, hairExpo, heros, publicity, queerWeek, rebrand, uniqa } from "@/public";
 
 export const menuItem = [
    {
@@ -23,26 +23,45 @@ export const menuItem = [
    },
 ];
 
-export const sliderItem = [
+export const portfolioItem = [
    {
       id: 1,
-      btn: "Learn more",
-      src: seamless,
-      title: `Seamless, Responsive Supply Chain and Distribution Network`,
-      para: "Our strategic warehouse locations are the superheroes of distribution, armed with the agility to respond to the ebb and flow of demand quicker than you can say 'replenish.' Say goodbye to stockouts and hello to a supply chain that's as robust as your morning coffee.",
+      src: publicity,
+      title: `Air Force Publicity`,
    },
    {
       id: 2,
-      btn: "Learn more",
-      src: elevating,
-      title: "About MeAward-Winning INNOVATION",
-      para: "Hey, not to brag (okay, maybe a little), but have you seen our Sustainables® 9” Octi-Square Plate? It snagged the PLMA 2022 Best Plate Award for Home & Household. Outshine the competition with a plate that's not only a feast for the eyes but also a high-five to mother nature.",
+      src: rebrand,
+      title: "by navarra rebrand",
    },
    {
       id: 3,
-      btn: "Learn more",
-      src: innovation,
-      title: "Elevating Everyday Products with Renewable Materials ",
-      para: "Kanak Naturals is at the forefront of integrating renewable materials such as rPET ocean-bound plastics, bamboo, and sugarcane into our packaging and products. Our focus is on promoting a circular economy and meeting the growing demand for responsibly sourced products while setting new standards for environmental responsibility.",
+      src: hairExpo,
+      title: "hair expo austrailia",
    },
+   {
+      id: 4,
+      src: heros,
+      title: "horse's head",
+   },
+   {
+      id: 5,
+      src: expos,
+      title: "minig / industrial expos",
+   },
+   // {
+   //    id: 6,
+   //    src: bookClub,
+   //    title: "no readgrets book club",
+   // },
+   // {
+   //    id: 7,
+   //    src: queerWeek,
+   //    title: "queer week",
+   // },
+   // {
+   //    id: 8,
+   //    src: uniqa,
+   //    title: "un!qa",
+   // },
 ];
