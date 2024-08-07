@@ -24,8 +24,8 @@ export default function App() {
 		<>
 			<Hero />
 			<Information />
-			<Portfolio />
 			<HorizontalSlider />
+			<Portfolio />
 			<DesignsSlider />
 		</>
 	);

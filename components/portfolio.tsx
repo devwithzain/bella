@@ -26,7 +26,16 @@ export default function Portfolio() {
 					style={{ x: x1 }}
 					className="flex relative gap-[2vw] w-[100vw] -left-[10vw]">
 					{projects1.map((project) => (
-						<div
+						<motion.div
+							initial={{ opacity: 0, y: "-100%" }}
+							transition={{
+								duration: 1,
+								ease: "easeInOut",
+								type: "spring",
+								delay: 0.1 * project.id,
+							}}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
 							key={project.id}
 							className="w-[300px] h-[600px] rounded-full flex items-center justify-center relative group shrink-0 cursor-pointer">
 							<div className="w-full h-full bg-black/20 backdrop-blur-sm absolute flex transition-opacity duration-500 ease-in-out group-hover:opacity-0 top-0 left-0 rounded-full z-10" />
@@ -37,17 +46,26 @@ export default function Portfolio() {
 							</div>
 							<Image
 								src={project.src}
-								alt=""
+								alt={project.title}
 								className="w-full h-full object-cover rounded-full"
 							/>
-						</div>
+						</motion.div>
 					))}
 				</motion.div>
 				<motion.div
 					style={{ x: x2 }}
 					className="flex relative gap-[2vw] w-[100vw] -left-[10vw]">
 					{projects2.map((project) => (
-						<div
+						<motion.div
+							initial={{ opacity: 0, y: "-100%" }}
+							transition={{
+								duration: 1,
+								ease: "easeInOut",
+								type: "spring",
+								delay: 0.1 * project.id,
+							}}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
 							key={project.id}
 							className="w-[300px] h-[600px] rounded-full flex items-center justify-center relative group shrink-0 cursor-pointer">
 							<div className="w-full h-full bg-black/20 backdrop-blur-sm absolute flex transition-opacity duration-500 ease-in-out group-hover:opacity-0 top-0 left-0 rounded-full z-10" />
@@ -58,10 +76,10 @@ export default function Portfolio() {
 							</div>
 							<Image
 								src={project.src}
-								alt=""
+								alt={project.title}
 								className="w-full h-full object-cover rounded-full"
 							/>
-						</div>
+						</motion.div>
 					))}
 				</motion.div>
 			</div>
