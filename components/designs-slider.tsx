@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { dragImg } from "@/public";
 import { ArrowUp } from "lucide-react";
-import Image from "next/image";
 
 export default function DesignsSlider() {
 	return (

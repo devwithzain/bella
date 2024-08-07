@@ -23,45 +23,89 @@ export const menuItem = [
    },
 ];
 
-export const portfolioItem = [
+export const projects1 = [
    {
       id: 1,
-      src: publicity,
       title: `Air Force Publicity`,
+      src: publicity,
    },
    {
       id: 2,
-      src: rebrand,
       title: "by navarra rebrand",
+      src: rebrand,
    },
    {
       id: 3,
-      src: hairExpo,
       title: "hair expo austrailia",
+      src: hairExpo,
    },
    {
       id: 4,
-      src: heros,
       title: "horse's head",
+      src: heros,
    },
    {
       id: 5,
-      src: expos,
       title: "minig / industrial expos",
+      src: expos,
    },
-   // {
-   //    id: 6,
-   //    src: bookClub,
-   //    title: "no readgrets book club",
-   // },
-   // {
-   //    id: 7,
-   //    src: queerWeek,
-   //    title: "queer week",
-   // },
-   // {
-   //    id: 8,
-   //    src: uniqa,
-   //    title: "un!qa",
-   // },
+   {
+      id: 6,
+      title: "no readgrets book club",
+      src: bookClub,
+   },
+   {
+      id: 7,
+      title: "queer week",
+      src: queerWeek,
+   },
+   {
+      id: 8,
+      title: "un!qa",
+      src: uniqa,
+   }
+];
+
+export const projects2 = [
+   {
+      id: 1,
+      title: "minig / industrial expos",
+      src: expos,
+   },
+   {
+      id: 2,
+      title: "no readgrets book club",
+      src: bookClub,
+   },
+   {
+      id: 3,
+      title: "queer week",
+      src: queerWeek,
+   },
+   {
+      id: 4,
+      title: "un!qa",
+      src: uniqa,
+   },
+   {
+      id: 5,
+      title: `Air Force Publicity`,
+      src: publicity,
+   },
+   {
+      id: 6,
+      title: "by navarra rebrand",
+      src: rebrand,
+   },
+   {
+      id: 7,
+      title: "hair expo austrailia",
+      src: hairExpo,
+   },
+   {
+      id: 8,
+      title: "horse's head",
+      src: heros,
+   },
+
 ];
