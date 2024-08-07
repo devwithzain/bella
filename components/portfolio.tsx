@@ -15,7 +15,7 @@ export default function Portfolio() {
 	const x2 = useTransform(scrollYProgress, [0, 1], [0, -150]);
 
 	return (
-		<div className="w-full flex flex-col my-20">
+		<div className="w-full flex flex-col my-20 overflow-x-hidden">
 			<h1 className="text-[#141313] text-[120px] text-center font-normal uppercase leading-[180px] font-BananasFont">
 				My Awesome Portfolio
 			</h1>
