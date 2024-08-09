@@ -38,7 +38,7 @@ export default function Portfolio() {
 		};
 	}, [xValue]);
 
-	const xTransform = useTransform(xValue, [-1, 1], ["0px", "-750px"]);
+	const xTransform = useTransform(xValue, [-1, 1], ["0px", "-650px"]);
 
 	const mouse = {
 		x: useMotionValue(0),
@@ -118,21 +118,23 @@ export default function Portfolio() {
 									style={{ x: xTransform }}
 									initial={{
 										opacity: 0,
-										x: project.id % 2 === 0 ? 150 : -150,
+										scale: project.id % 2 === 0 ? 0.5 : 0.5,
+										y: project.id % 2 === 0 ? 150 : -150,
 									}}
 									animate={{
 										opacity: 1,
-										x: 0,
+										scale: 1,
+										y: 0,
 									}}
 									exit={{
 										opacity: 0,
 									}}
 									transition={{
-										duration: 1,
+										duration: 0.5,
 										ease: "easeInOut",
 										delay: 0.1 * project.id,
 									}}
-									className="w-[300px] h-[600px] lg:w-[250px] lg:h-[550px] md:w-[200px] md:h-[400px]  rounded-full flex items-center justify-center relative group shrink-0 cursor-pointer">
+									className="w-[280px] h-[550px] lg:w-[250px] lg:h-[550px] md:w-[200px] md:h-[400px]  rounded-full flex items-center justify-center relative group shrink-0 cursor-pointer">
 									<div className="w-full h-full bg-black/20 backdrop-blur-sm absolute flex transition-opacity duration-500 ease-in-out group-hover:opacity-0 top-0 left-0 rounded-full z-10" />
 									<div className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 transition-transform duration-500 ease-in-out group-hover:scale-110">
 										<h1 className="text-[20px] text-center font-Poppins font-semibold uppercase text-white group-hover:text-black transition-colors duration-500 ease-in-out">
