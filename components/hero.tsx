@@ -11,7 +11,7 @@ export default function Hero() {
 		<div className="w-full h-screen padding-x">
 			<div className="w-full h-full flex items-center justify-center flex-col gap-5">
 				<div className="flex items-center gap-3">
-					<h1 className="text-[#141313] text-[288px] font-normal uppercase leading-[220px] font-BananasFont">
+					<h1 className="text-[#141313] text-[288px] lg:text-[200px] md:text-[150px] xm:text-[80px] sm:text-[80px] font-normal uppercase leading-[220px] lg:leading-[180px] md:leading-none xm:leading-none sm:leading-none font-BananasFont">
 						<TextMask>{phares}</TextMask>
 					</h1>
 					<motion.div
@@ -24,6 +24,7 @@ export default function Hero() {
 							alt="heroImg"
 							width={250}
 							height={250}
+							className="xm:w-20 sm:w-20"
 						/>
 					</motion.div>
 				</div>
@@ -32,7 +33,7 @@ export default function Hero() {
 					whileInView={{ opacity: 1, x: "0%" }}
 					transition={{ duration: 1, ease: "easeInOut" }}
 					viewport={{ once: true }}
-					className="w-[50%] rounded-full bg-black">
+					className="w-[50%] rounded-full bg-black xm:w-full sm:w-full">
 					<TextMarquee baseVelocity={1}>
 						<h1 className="text-primary uppercase text-[30px] font-semibold flex ">
 							<span className="mx-[20px] w-[40px] h-[40px]">
@@ -97,7 +98,7 @@ export default function Hero() {
 					</TextMarquee>
 				</motion.div>
 				<div>
-					<h1 className="text-[#141313] text-[288px] font-normal uppercase leading-[220px] font-BananasFont">
+					<h1 className="text-[#141313] text-[288px] lg:text-[200px] md:text-[150px] xm:text-[80px] sm:text-[80px] font-normal uppercase leading-[220px] lg:leading-[180px] md:leading-none xm:leading-none sm:leading-none font-BananasFont">
 						<TextMask>{phares1}</TextMask>
 					</h1>
 				</div>

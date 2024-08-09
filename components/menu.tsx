@@ -89,7 +89,7 @@ export default function Menu() {
 	return (
 		<>
 			<motion.nav
-				className="fixed top-0 left-0 w-full flex justify-between items-center h-[10vh] px-[32px] z-[9999] backdrop-blur-sm"
+				className="fixed top-0 left-0 w-full flex justify-between items-center h-[10vh] padding-x z-[9999] backdrop-blur-sm"
 				variants={navVariants}
 				initial="hidden"
 				viewport={{ once: true }}
@@ -99,7 +99,7 @@ export default function Menu() {
 						@bella
 					</p>
 				</div>
-				<div className="text-center font-BananasFont">
+				<div className="text-center font-BananasFont xm:hidden sm:hidden">
 					<Link
 						href="/"
 						className="text-[30px] sm:text-[18px] xm:text-[16px] font-BananasFont">
@@ -107,10 +107,10 @@ export default function Menu() {
 					</Link>
 				</div>
 				<div
-					className="flex bg-black p-[15px] items-center justify-center rounded-full cursor-pointer"
+					className="flex bg-black p-[12px] items-center justify-center rounded-full cursor-pointer"
 					onClick={toggleMenu}>
 					<button
-						className={`flex justify-center items-center bg-[#ffffff00] rounded-[4px] outline-none h-[20px] w-[20px] border-none transition-all duration-[0.25s] ease-out cursor-pointer before:content-[""] before:w-[35px] xm:before:w-[25px] sm:before:w-[25px] xm:after:w-[25px] sm:after:w-[25px] before:h-[2px] before:absolute before:bg-white before:will-change-transform before:-translate-y-[3px] after:content-[""] after:w-[35px] after:h-[2px] after:absolute after:bg-white after:will-change-transform after:translate-y-[3px] before:transition-all before:duration-[0.3s] before:ease-out after:transition-all after:duration-[0.3s] after:ease-out ${
+						className={`flex justify-center items-center bg-[#ffffff00] rounded-[4px] outline-none h-[20px] w-[20px] border-none transition-all duration-[0.25s] ease-out cursor-pointer before:content-[""] before:w-[35px] xm:before:w-[25px] sm:before:w-[25px] xm:after:w-[25px] sm:after:w-[25px] before:h-[2px] before:absolute before:bg-white before:will-change-transform before:-translate-y-[3px] after:content-[""] after:w-[35px] after:h-[2px] after:absolute after:bg-white after:will-change-transform after:translate-y-[2px] before:transition-all before:duration-[0.3s] before:ease-out after:transition-all after:duration-[0.3s] after:ease-out ${
 							isOpen
 								? "after:-rotate-45 after:translate-y-0 before:translate-y-[1px] before:rotate-45 transition-all duration-[0.25s] ease-out"
 								: "after:rotate-0  before:rotate-0 transition-all duration-[0.25s] ease-out"
@@ -158,7 +158,7 @@ export default function Menu() {
 							className="flex gap-2 items-center">
 							<Link
 								href="/"
-								className="text-[20px] text-black font-BananasFont">
+								className="text-[20px] text-black font-BananasFont xm:text-sm sm:text-sm">
 								{item}
 							</Link>
 							<p className="text-[#cdc6be]">.</p>

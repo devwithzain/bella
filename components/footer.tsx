@@ -6,8 +6,8 @@ import { Facebook, Instagram, MoveRight } from "lucide-react";
 export default function Footer() {
 	return (
 		<div className="w-full">
-			<div className="w-full flex flex-col gap-24 padding-x py-10">
-				<div className="w-full flex justify-between gap-5">
+			<div className="w-full flex flex-col gap-24 padding-x py-10 xm:gap-10 sm:gap-10">
+				<div className="w-full flex justify-between gap-5 xm:flex-col sm:flex-col">
 					<div className="flex flex-col">
 						<div className="flex flex-col gap-4">
 							<h1 className="text-black text-3xl font-bold font-PlayfairDisplay leading-[50px]">
@@ -66,20 +66,20 @@ export default function Footer() {
 					</div>
 				</div>
 				<div className="w-full flex items-center justify-between gap-5">
-					<div className="flex items-center gap-10">
+					<div className="flex gap-10 xm:gap-2 sm:gap-2 xm:flex-col sm:flex-col">
 						<div className="flex items-center gap-3">
-							<Instagram className="text-[#BB895B]" />
+							<Instagram className="text-[#BB895B] w-6 h-6" />
 							<Link
 								href="tel:+16099554601"
-								className="text-black text-2xl font-normal font-['Poppins'] leading-loose">
+								className="text-black text-2xl font-normal font-Poppins">
 								Instagram
 							</Link>
 						</div>
 						<div className="flex items-center gap-3">
-							<Facebook className="text-[#BB895B]" />
+							<Facebook className="text-[#BB895B] w-6 h-6" />
 							<Link
 								href="tel:+16099554601"
-								className="text-black text-2xl font-normal font-['Poppins'] leading-loose">
+								className="text-black text-2xl font-normal font-Poppins">
 								Facebook
 							</Link>
 						</div>
@@ -89,11 +89,11 @@ export default function Footer() {
 								alt="pin"
 								width={20}
 								height={20}
-								className="text-[#BB895B]"
+								className="text-[#BB895B] w-6 h-6"
 							/>
 							<Link
 								href="tel:+16099554601"
-								className="text-black text-2xl font-normal font-['Poppins'] leading-loose">
+								className="text-black text-2xl font-normal font-Poppins">
 								Pinterest
 							</Link>
 						</div>

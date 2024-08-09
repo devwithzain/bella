@@ -44,7 +44,7 @@ export default function TextMarquee({
 	});
 
 	return (
-		<div className="overflow-hidden flex whitespace-nowrap flex-wrap my-[40px]">
+		<div className="overflow-hidden flex whitespace-nowrap flex-wrap my-[40px] xm:my-6 sm:my-6">
 			<motion.div
 				className="flex whitespace-nowrap items-center flex-nowrap"
 				style={{ x }}>
