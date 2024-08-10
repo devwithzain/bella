@@ -16,3 +16,6 @@ export { default as bookClub } from './bookClub.gif';
 export { default as queerWeek } from './queerWeek.jpg';
 export { default as uniqa } from './uniqa.gif';
 export { default as dragImg } from './dragImg.png';
+export { default as skill } from './skill.jpg';
+export { default as heroBg } from './heroBg.png';
+export { default as aboutImg } from './aboutImg.png';

@@ -8,18 +8,13 @@ export const menuItem = [
    },
    {
       id: 2,
-      title: "About Me",
-      href: "/about-me",
+      title: "Work ",
+      href: "/work",
    },
    {
       id: 3,
-      title: "Portfolio ",
-      href: "/portfolio",
-   },
-   {
-      id: 4,
-      title: "Contact Me",
-      href: "/contact-me",
+      title: "Contact",
+      href: "/contact",
    },
 ];
 

@@ -6,8 +6,6 @@ import {
 	Footer,
 	Hero,
 	HorizontalSlider,
-	Information,
-	Menu,
 	Portfolio,
 } from "@/components";
 import { AnimatePresence } from "framer-motion";
@@ -38,9 +36,7 @@ export default function App() {
 			<AnimatePresence mode="wait">{isLoading && <PreLoad />}</AnimatePresence>
 			{!isLoading && (
 				<>
-					<Menu />
 					<Hero />
-					<Information />
 					<HorizontalSlider />
 					<Portfolio />
 					<DesignsSlider />

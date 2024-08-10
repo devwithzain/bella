@@ -10,6 +10,7 @@ export default function HorizontalScrollCarousel() {
 	});
 
 	const x = useTransform(scrollYProgress, [0, 1], ["0%", "-300%"]);
+	const width = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
 	const svgRef = useRef<SVGSVGElement | null>(null);
 	const pathRef = useRef<SVGPathElement | null>(null);
@@ -54,9 +55,9 @@ export default function HorizontalScrollCarousel() {
 	return (
 		<section
 			ref={targetRef}
-			className="relative h-[300vh] bg-slate-900">
+			className="relative h-[300vh] bg-[#BBB0D2]">
 			<div className="sticky top-0 flex h-screen items-center overflow-hidden border">
-				<svg
+				{/* <svg
 					ref={svgRef}
 					viewBox="0 700 4530 988"
 					fill="none"
@@ -68,7 +69,11 @@ export default function HorizontalScrollCarousel() {
 						stroke="black"
 						strokeWidth="10"
 					/>
-				</svg>
+				</svg> */}
+
+				<motion.div
+					style={{ width }}
+					className="h-2 bg-black rounded-lg mt-20 z-[999] absolute"></motion.div>
 				<motion.div
 					style={{ x }}
 					className="w-full flex h-full">

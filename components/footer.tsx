@@ -38,7 +38,7 @@ export default function Footer() {
 								Newsletter
 							</h1>
 							<Link
-								href="mailto:b3lla1124@gmail.com"
+								href="/"
 								className="text-black text-2xl font-normal font-Poppins">
 								Subscribe to get updates
 							</Link>
@@ -53,7 +53,7 @@ export default function Footer() {
 							</div>
 						</div>
 						<div className="flex items-center relative group">
-							<div className="w-16 h-16 rounded-full bg-[#DD6013] group-hover:w-full transition-all duration-200 ease-linear" />
+							<div className="w-16 h-16 rounded-full bg-[#BBB0D2] group-hover:w-full transition-all duration-200 ease-linear" />
 							<div className="flex items-center gap-2 absolute left-[20px]">
 								<Link
 									href="/"
@@ -68,17 +68,17 @@ export default function Footer() {
 				<div className="w-full flex items-center justify-between gap-5">
 					<div className="flex gap-10 xm:gap-2 sm:gap-2 xm:flex-col sm:flex-col">
 						<div className="flex items-center gap-3">
-							<Instagram className="text-[#BB895B] w-6 h-6" />
+							<Instagram className="text-[#BBB0D2] w-6 h-6" />
 							<Link
-								href="tel:+16099554601"
+								href="/"
 								className="text-black text-2xl font-normal font-Poppins">
 								Instagram
 							</Link>
 						</div>
 						<div className="flex items-center gap-3">
-							<Facebook className="text-[#BB895B] w-6 h-6" />
+							<Facebook className="text-[#BBB0D2] w-6 h-6" />
 							<Link
-								href="tel:+16099554601"
+								href="/"
 								className="text-black text-2xl font-normal font-Poppins">
 								Facebook
 							</Link>
@@ -89,10 +89,10 @@ export default function Footer() {
 								alt="pin"
 								width={20}
 								height={20}
-								className="text-[#BB895B] w-6 h-6"
+								className="text-[#BBB0D2] w-6 h-6"
 							/>
 							<Link
-								href="tel:+16099554601"
+								href="/"
 								className="text-black text-2xl font-normal font-Poppins">
 								Pinterest
 							</Link>

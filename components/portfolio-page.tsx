@@ -55,9 +55,9 @@ export default function Portfolio() {
 				<h1 className="text-[#141313] text-[180px] lg:text-[150px] md:text-[130px] xm:text-[80px] sm:text-[80px] font-normal uppercase leading-[200px] lg:leading-[180px] md:leading-none xm:leading-none sm:leading-none font-BananasFont">
 					<TextMask>{phares1}</TextMask>
 				</h1>
-				<h1 className="w-fit p-4 text-[#DD6013] border-[#DD6013] border-2 text-[180px] lg:text-[150px] md:text-[130px] xm:text-[80px] sm:text-[80px] font-normal uppercase leading-[150px] lg:leading-[180px] md:leading-none xm:leading-none sm:leading-none font-BananasFont">
+				<motion.h1 className="w-fit p-4 text-[#BBB0D2] text-[180px] lg:text-[150px] md:text-[130px] xm:text-[80px] sm:text-[80px] font-normal uppercase leading-[150px] lg:leading-[180px] md:leading-none xm:leading-none sm:leading-none font-BananasFont">
 					<TextMask>{phares2}</TextMask>
-				</h1>
+				</motion.h1>
 			</div>
 			<div
 				ref={containerRef1}

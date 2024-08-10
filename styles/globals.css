@@ -63,7 +63,3 @@ body {
 		@apply xl:text-[16px] xl:leading-[24px] lg:text-[16px] lg:leading-[24px] text-[14px] leading-[22px];
 	}
 }
-.squiggle {
-	width: 100vw;
-	height: 220vw;
-}

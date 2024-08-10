@@ -86,7 +86,7 @@ export default function Portfolio() {
 				onMouseEnter={() => setIsCursorInside(true)}
 				onMouseLeave={() => setIsCursorInside(false)}>
 				<h1
-					className="w-full bg-[#dd6013] text-primary text-[80px] lg:text-[60px] md:text-[50px] text-center font-normal uppercase leading-[180px] font-BananasFont cursor-none"
+					className="w-full bg-[#BBB0D2] text-primary text-[80px] lg:text-[60px] md:text-[50px] text-center font-normal uppercase leading-[180px] font-BananasFont cursor-none"
 					onClick={() => setClicked(!clicked)}>
 					My Awesome Portfolio
 				</h1>
