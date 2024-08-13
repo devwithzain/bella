@@ -52,10 +52,10 @@ export default function Portfolio() {
 	return (
 		<div className="w-full flex flex-col my-20 overflow-x-hidden">
 			<div className="flex flex-col gap-2 items-center mt-20">
-				<h1 className="text-[#141313] text-[180px] lg:text-[150px] md:text-[130px] xm:text-[80px] sm:text-[80px] font-normal uppercase leading-[200px] lg:leading-[180px] md:leading-none xm:leading-none sm:leading-none font-BananasFont">
+				<h1 className="text-[#141313] text-[180px] lg:text-[130px] md:text-[100px] xm:text-[50px] sm:text-[50px] font-normal uppercase leading-[150px] lg:leading-[110px] md:leading-none xm:leading-none sm:leading-none font-BananasFont">
 					<TextMask>{phares1}</TextMask>
 				</h1>
-				<motion.h1 className="w-fit p-4 text-[#BBB0D2] text-[180px] lg:text-[150px] md:text-[130px] xm:text-[80px] sm:text-[80px] font-normal uppercase leading-[150px] lg:leading-[180px] md:leading-none xm:leading-none sm:leading-none font-BananasFont">
+				<motion.h1 className="text-[#BBB0d2] text-[180px] lg:text-[130px] md:text-[100px] xm:text-[50px] sm:text-[50px] font-normal uppercase leading-[150px] lg:leading-[110px] md:leading-none xm:leading-none sm:leading-none font-BananasFont">
 					<TextMask>{phares2}</TextMask>
 				</motion.h1>
 			</div>

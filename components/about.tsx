@@ -1,7 +1,6 @@
 "use client";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { TextMarquee, TextMask } from "@/animations";
+import { TextMask } from "@/animations";
 
 export default function About() {
 	const phares1 = ["About"];

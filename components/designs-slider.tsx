@@ -93,7 +93,7 @@ export default function DesignsSlider() {
 			onMouseLeave={() => setIsCursorInside(false)}>
 			{/* Custom Cursor Follower */}
 			<motion.div
-				className="w-[100px] h-[100px] absolute rounded-full bg-primary/50 pointer-events-none z-30 flex items-center justify-center"
+				className="w-[100px] h-[100px] absolute rounded-full bg-primary/50 pointer-events-none z-30 flex items-center justify-center sm:hidden xm:hidden"
 				style={{
 					left: smoothMouse.x,
 					top: smoothMouse.y,

@@ -21,7 +21,7 @@ export default function Portfolio() {
 				<div>
 					<Link
 						href="/"
-						className={`text-[25px] text-black font-bold font-Poppins tracking-tighter hover:tracking-[5px] transition-all duration-200 ease-linear `}>
+						className={`text-[25px] xm:text-[16px] sm:text-[16px] text-black font-bold font-Poppins tracking-tighter hover:tracking-[5px] transition-all duration-200 ease-linear `}>
 						Home
 					</Link>
 				</div>
@@ -29,14 +29,14 @@ export default function Portfolio() {
 					<div className="">
 						<Link
 							href="/work"
-							className={`text-[25px] text-black font-bold font-Poppins tracking-tighter hover:tracking-[5px] transition-all duration-200 ease-linear `}>
+							className={`text-[25px] xm:text-[16px] sm:text-[16px] text-black font-bold font-Poppins tracking-tighter hover:tracking-[5px] transition-all duration-200 ease-linear `}>
 							Work
 						</Link>
 					</div>
 					<div className="">
 						<Link
 							href="/contact"
-							className={`text-[25px] text-black font-bold font-Poppins tracking-tighter hover:tracking-[5px] transition-all duration-200 ease-linear `}>
+							className={`text-[25px] xm:text-[16px] sm:text-[16px] text-black font-bold font-Poppins tracking-tighter hover:tracking-[5px] transition-all duration-200 ease-linear `}>
 							Contact
 						</Link>
 					</div>

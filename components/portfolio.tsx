@@ -86,12 +86,12 @@ export default function Portfolio() {
 				onMouseEnter={() => setIsCursorInside(true)}
 				onMouseLeave={() => setIsCursorInside(false)}>
 				<h1
-					className="w-full bg-[#BBB0D2] text-primary text-[80px] lg:text-[60px] md:text-[50px] text-center font-normal uppercase leading-[180px] font-BananasFont cursor-none"
+					className="w-full bg-[#BBB0D2] text-primary text-[80px] lg:text-[60px] md:text-[50px] xm:text-[40px] sm:text-[40px] py-2 text-center font-normal uppercase leading-[180px] xm:leading-none sm:leading-none font-BananasFont cursor-none"
 					onClick={() => setClicked(!clicked)}>
 					My Awesome Portfolio
 				</h1>
 				<motion.div
-					className="w-[100px] h-[100px] absolute rounded-full bg-primary/50 pointer-events-none z-30 flex items-center justify-center"
+					className="w-[100px] h-[100px] absolute rounded-full bg-primary/50 pointer-events-none z-30 flex items-center justify-center sm:hidden xm:hidden"
 					style={{
 						left: smoothMouse.x,
 						top: smoothMouse.y,

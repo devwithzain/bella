@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 import {
 	afterEffect,
 	autodesk,
@@ -33,7 +34,12 @@ export default function Card() {
 							</h1>
 						</div>
 						<div className="w-full h-full p-10 flex justify-center flex-1 items-center">
-							<div className="w-[350px] h-[350px] lg:w-[300px] lg:h-[300px] md:w-[250px] md:h-[250px] rounded-full border-4 border-black flex items-center justify-center bg-primary">
+							<motion.div
+								initial={{ opacity: 0, scale: 0.5 }}
+								whileInView={{ opacity: 1, scale: 1 }}
+								transition={{ duration: 0.5, ease: "easeInOut" }}
+								viewport={{ once: true }}
+								className="w-[350px] h-[350px] lg:w-[300px] lg:h-[300px] md:w-[250px] md:h-[250px] rounded-full border-4 border-black flex items-center justify-center bg-primary z-50">
 								<Image
 									className="lg:w-[100px] lg:h-[100px] md:w-[100px] md:h-[100px] "
 									src={autodesk}
@@ -41,7 +47,7 @@ export default function Card() {
 									width={150}
 									height={150}
 								/>
-							</div>
+							</motion.div>
 						</div>
 						<div className="w-full h-full p-10 flex flex-1 items-start">
 							<div className="flex flex-col items-center">
@@ -56,9 +62,14 @@ export default function Card() {
 					</div>
 				</div>
 			</div>
-			<div className="w-[60%] h-full flex-col flex items-center justify-between bg-[#BBB0D2] shrink-0">
+			<div className="w-[60%] h-full flex-col flex items-center justify-between bg-[#BBB0D2] shrink-0 ">
 				<div className="w-full h-full flex items-center justify-center flex-col gap-4">
-					<div className="w-[350px] h-[350px] lg:w-[300px] lg:h-[300px] md:w-[250px] md:h-[250px] rounded-full border-4 border-black flex items-center justify-center bg-primary">
+					<motion.div
+						initial={{ opacity: 0, scale: 0.5 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{ duration: 0.5, ease: "easeInOut" }}
+						viewport={{ once: true }}
+						className="w-[350px] h-[350px] lg:w-[300px] lg:h-[300px] md:w-[250px] md:h-[250px] rounded-full border-4 border-black flex items-center justify-center bg-primary z-50">
 						<Image
 							className="lg:w-[100px] lg:h-[100px] md:w-[100px] md:h-[100px] "
 							src={afterEffect}
@@ -66,7 +77,7 @@ export default function Card() {
 							width={200}
 							height={200}
 						/>
-					</div>
+					</motion.div>
 					<div className="flex flex-col items-center">
 						<h1 className="text-primary/20 text-[232px] lg:text-[100px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
 							<TextMask>{phares4}</TextMask>
@@ -87,7 +98,12 @@ export default function Card() {
 							<TextMask>{phares7}</TextMask>
 						</h1>
 					</div>
-					<div className="w-[350px] h-[350px] lg:w-[300px] lg:h-[300px] md:w-[250px] md:h-[250px] rounded-full border-4 border-black flex items-center justify-center bg-primary">
+					<motion.div
+						initial={{ opacity: 0, scale: 0.5 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{ duration: 0.5, ease: "easeInOut" }}
+						viewport={{ once: true }}
+						className="w-[350px] h-[350px] lg:w-[300px] lg:h-[300px] md:w-[250px] md:h-[250px] rounded-full border-4 border-black flex items-center justify-center bg-primary z-50">
 						<Image
 							className="lg:w-[100px] lg:h-[100px] md:w-[100px] md:h-[100px] "
 							src={illustration}
@@ -95,12 +111,17 @@ export default function Card() {
 							width={200}
 							height={200}
 						/>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 			<div className="w-[60%] h-full flex-col flex items-center justify-between bg-[#BBB0D2] shrink-0">
 				<div className="w-full h-full flex items-center justify-center flex-col gap-4">
-					<div className="w-[350px] h-[350px] lg:w-[300px] lg:h-[300px] md:w-[250px] md:h-[250px] rounded-full border-4 border-black flex items-center justify-center bg-primary">
+					<motion.div
+						initial={{ opacity: 0, scale: 0.5 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{ duration: 0.5, ease: "easeInOut" }}
+						viewport={{ once: true }}
+						className="w-[350px] h-[350px] lg:w-[300px] lg:h-[300px] md:w-[250px] md:h-[250px] rounded-full border-4 border-black flex items-center justify-center bg-primary z-50">
 						<Image
 							className="lg:w-[100px] lg:h-[100px] md:w-[100px] md:h-[100px] "
 							src={photoshop}
@@ -108,7 +129,7 @@ export default function Card() {
 							width={200}
 							height={200}
 						/>
-					</div>
+					</motion.div>
 					<div className="flex flex-col items-center">
 						<h1 className="text-primary/20 text-[232px] lg:text-[100px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
 							<TextMask>{phares8}</TextMask>
@@ -129,7 +150,12 @@ export default function Card() {
 							<TextMask>{phares11}</TextMask>
 						</h1>
 					</div>
-					<div className="w-[350px] h-[350px] lg:w-[300px] lg:h-[300px] md:w-[250px] md:h-[250px] rounded-full border-4 border-black flex items-center justify-center bg-primary">
+					<motion.div
+						initial={{ opacity: 0, scale: 0.5 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{ duration: 0.5, ease: "easeInOut" }}
+						viewport={{ once: true }}
+						className="w-[350px] h-[350px] lg:w-[300px] lg:h-[300px] md:w-[250px] md:h-[250px] rounded-full border-4 border-black flex items-center justify-center bg-primary z-50">
 						<Image
 							className="lg:w-[100px] lg:h-[100px] md:w-[100px] md:h-[100px] "
 							src={indesign}
@@ -137,12 +163,17 @@ export default function Card() {
 							width={200}
 							height={200}
 						/>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 			<div className="w-[60%] h-full flex-col flex items-center justify-between bg-[#BBB0D2] shrink-0">
 				<div className="w-full h-full flex items-center justify-center flex-col gap-4">
-					<div className="w-[350px] h-[350px] lg:w-[300px] lg:h-[300px] md:w-[250px] md:h-[250px] rounded-full border-4 border-black flex items-center justify-center bg-primary">
+					<motion.div
+						initial={{ opacity: 0, scale: 0.5 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{ duration: 0.5, ease: "easeInOut" }}
+						viewport={{ once: true }}
+						className="w-[350px] h-[350px] lg:w-[300px] lg:h-[300px] md:w-[250px] md:h-[250px] rounded-full border-4 border-black flex items-center justify-center bg-primary z-50">
 						<Image
 							className="lg:w-[100px] lg:h-[100px] md:w-[100px] md:h-[100px] "
 							src={photoshop}
@@ -150,7 +181,7 @@ export default function Card() {
 							width={200}
 							height={200}
 						/>
-					</div>
+					</motion.div>
 					<div className="flex flex-col items-center">
 						<h1 className="text-primary/20 text-[232px] lg:text-[100px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none -mb-10 lg:mb-0 md:mb-0">
 							<TextMask>{phares12}</TextMask>
