@@ -24,14 +24,65 @@ export default function Hero() {
 		<>
 			<div className="w-full flex items-center justify-center bg-[#bbb0d2] sm:hidden xm:hidden">
 				<div className="w-[1235px] h-[1175.61px] relative">
-					<div className="w-[768.25px] h-[257.79px] left-[257.79px] top-0 absolute origin-top-left rotate-90 text-center text-white text-[354.01px] lg:text-[300px] md:text-[250px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[221.25px]">
-						Por
+					<div className="w-[768.25px] h-[257.79px] left-[-20%] absolute origin-top-left text-center text-white text-[354.01px] lg:text-[300px] md:text-[250px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[221.25px] flex flex-col gap-10">
+						{["p", "o", "r"].map((item, i) => (
+							<motion.h1
+								initial={{
+									scale: 0,
+									opacity: 0,
+									y: -100,
+								}}
+								whileInView={{
+									scale: 1,
+									opacity: 1,
+									y: 0,
+								}}
+								viewport={{ once: true }}
+								transition={{ delay: i * 0.5 }}
+								key={i}>
+								{item}
+							</motion.h1>
+						))}
 					</div>
-					<div className="w-[768.25px] h-[257.79px] left-[1235px] top-[407.36px] absolute origin-top-left rotate-90 text-center text-white text-[354.01px] lg:text-[300px] md:text-[250px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[221.25px]">
-						lio
+					<div className="flex items-end mt-24 w-[768px] h-[257px] left-[1235px] top-[407px] absolute origin-top-left rotate-90 text-center text-white text-[354px] lg:text-[300px] md:text-[250px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[221px]">
+						{["l", "i", "o"].map((item, i) => (
+							<motion.h1
+								initial={{
+									scale: 0,
+									opacity: 0,
+									y: 0,
+								}}
+								whileInView={{
+									scale: 1,
+									opacity: 1,
+									y: 0,
+								}}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5, delay: 2 + i * 0.5 }}
+								key={i}>
+								{item}
+							</motion.h1>
+						))}
 					</div>
-					<div className="w-[768.25px] h-[257.79px] left-[237.23px] top-[510.11px] absolute text-center text-white text-[354.01px] lg:text-[300px] md:text-[250px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[221.25px]">
-						tfo
+					<div className="flex mt-5 w-[768.25px] h-[257.79px] left-[237.23px] top-[510.11px] absolute text-center text-white text-[354.01px] lg:text-[300px] md:text-[250px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[221.25px]">
+						{["t", "f", "o"].map((item, i) => (
+							<motion.h1
+								initial={{
+									scale: 0,
+									opacity: 0,
+									x: -100,
+								}}
+								whileInView={{
+									scale: 1,
+									opacity: 1,
+									x: 0,
+								}}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5, delay: 0.5 + i * 0.5 }}
+								key={i}>
+								{item}
+							</motion.h1>
+						))}
 					</div>
 					<div className="left-[579px] top-[400px] absolute text-center text-black text-[82.81px] font-normal font-PlayfairDisplay leading-[100px]">
 						<TextMask>{phares4}</TextMask>
