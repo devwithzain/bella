@@ -23,8 +23,8 @@ export default function Hero() {
 	return (
 		<>
 			<div className="w-full flex items-center justify-center bg-[#bbb0d2] sm:hidden xm:hidden">
-				<div className="w-[1235px] h-[1175.61px] relative">
-					<div className="w-[768.25px] h-[257.79px] left-[-20%] absolute origin-top-left text-center text-white text-[354.01px] lg:text-[300px] md:text-[250px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[221.25px] flex flex-col gap-10">
+				<div className="w-[70%] td:w-[60%] top-10 min-h-screen relative">
+					<div className="left-0 absolute origin-top-left text-center text-white text-[300px] lg:text-[230px] lg:leading-[130px] md:text-[200px] md:leading-[150px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[180px] flex flex-col gap-10 md:gap-0  td:text-[200px] td:leading-[120px]">
 						{["p", "o", "r"].map((item, i) => (
 							<motion.h1
 								initial={{
@@ -44,7 +44,7 @@ export default function Hero() {
 							</motion.h1>
 						))}
 					</div>
-					<div className="flex items-end mt-24 w-[768px] h-[257px] left-[1235px] top-[407px] absolute origin-top-left rotate-90 text-center text-white text-[354px] lg:text-[300px] md:text-[250px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[221px]">
+					<div className="flex md:-right-24 lg:right-0 absolute bottom-[30%] right-[16%] lg:bottom-[33%] origin-bottom rotate-90 text-center text-white text-[300px] lg:text-[230px] lg:leading-[130px] md:text-[200px] md:leading-[150px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[180px] td:text-[200px] td:leading-[120px]  td:bottom-[35%] td:right-0">
 						{["l", "i", "o"].map((item, i) => (
 							<motion.h1
 								initial={{
@@ -64,7 +64,7 @@ export default function Hero() {
 							</motion.h1>
 						))}
 					</div>
-					<div className="flex mt-5 w-[768.25px] h-[257.79px] left-[237.23px] top-[510.11px] absolute text-center text-white text-[354.01px] lg:text-[300px] md:text-[250px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[221.25px]">
+					<div className="flex md:mt-2 md:left-[240px] left-[240px] top-[420px] md:top-1/4 lg:top-[44%] absolute text-center text-white text-[300px] lg:text-[230px] lg:leading-[130px] md:text-[200px] md:leading-[150px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[221.25px]  td:text-[200px] td:leading-[120px] td:top-[44%] td:left-[150px] td:ml-5">
 						{["t", "f", "o"].map((item, i) => (
 							<motion.h1
 								initial={{
@@ -78,16 +78,16 @@ export default function Hero() {
 									x: 0,
 								}}
 								viewport={{ once: true }}
-								transition={{ duration: 0.5, delay: 0.5 + i * 0.5 }}
+								transition={{ duration: 0.5, delay: 1 + i * 0.5 }}
 								key={i}>
 								{item}
 							</motion.h1>
 						))}
 					</div>
-					<div className="left-[579px] top-[400px] absolute text-center text-black text-[82.81px] font-normal font-PlayfairDisplay leading-[100px]">
+					<div className="right-[21%] top-[340px] absolute text-center text-black text-[80px] lg:text-[50px] td:text-[30px] td:top-[33%] td:right-10 lg:top-[30%] lg:right-[0%] font-normal font-PlayfairDisplay leading-[100px]">
 						<TextMask>{phares4}</TextMask>
 					</div>
-					<div className="left-[83px] top-[759.36px] absolute text-center text-black text-[82.81px] font-normal font-PlayfairDisplay leading-[100px]">
+					<div className="left-0 top-[660px] absolute text-center text-black text-[80px] lg:text-[50px] td:text-[30px]  td:left-[0%] td:top-[60%] lg:left-[0%] lg:top-[62%] font-normal font-PlayfairDisplay leading-[100px]">
 						<TextMask>{phares5}</TextMask>
 					</div>
 				</div>
@@ -148,15 +148,15 @@ export default function Hero() {
 				<div className="flex flex-1">
 					<div className="flex flex-col gap-5">
 						<div>
-							<h1 className="text-black text-[95px] lg:text-[80px] md:text-[60px] sm:text-[30px] xm:text-[30px] font-semibold font-Poppins leading-none">
+							<h1 className="text-black text-[95px] td:text-[50px] lg:text-[65px] md:text-[40px] sm:text-[30px] xm:text-[30px] font-semibold font-Poppins leading-none">
 								<TextMask>{phares1}</TextMask>
 							</h1>
 						</div>
 						<div className="flex flex-col gap-5">
-							<p className="text-black text-[24px] xm:text-[18px] sm:text-[18px] leading-[36px] font-normal font-Poppins">
+							<p className="text-black text-[24px] td:text-[16px] lg:text-[20px] xm:text-[18px] sm:text-[18px] leading-[36px] font-normal font-Poppins">
 								<TextMask>{phares2}</TextMask>
 							</p>
-							<p className="text-black text-[24px] xm:text-[18px] sm:text-[18px] leading-[36px] font-normal font-Poppins">
+							<p className="text-black text-[24px] td:text-[16px] lg:text-[20px] xm:text-[18px] sm:text-[18px] leading-[36px] font-normal font-Poppins">
 								<TextMask>{phares3}</TextMask>
 							</p>
 						</div>
