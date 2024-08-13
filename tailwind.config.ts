@@ -22,7 +22,8 @@ const config: Config = {
       xm: { max: "400px" },
       sm: { min: "401px", max: "768px" },
       md: { min: "769px", max: "1024px" },
-      lg: { min: "1025px", max: "1490px" },
+      td: { min: "1025px", max: "1320px" },
+      lg: { min: "1321px", max: "1490px" },
       xl: { min: "1491px" },
     }
   },
