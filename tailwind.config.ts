@@ -24,6 +24,9 @@ const config: Config = {
       md: { min: "769px", max: "1024px" },
       td: { min: "1025px", max: "1320px" },
       lg: { min: "1321px", max: "1490px" },
+      // mdl: { min: "1000px", max: "1100px" },
+      // td: { min: "1200px", max: "1365px" },
+      // lg: { min: "1366px", max: "1599px" },
       xl: { min: "1491px" },
     }
   },

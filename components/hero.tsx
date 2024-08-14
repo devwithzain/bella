@@ -23,14 +23,14 @@ export default function Hero() {
 	return (
 		<>
 			<div className="w-full flex items-center justify-center bg-[#bbb0d2] sm:hidden xm:hidden">
-				<div className="w-[70%] td:w-[60%] top-10 min-h-screen relative">
-					<div className="left-0 absolute origin-top-left text-center text-white text-[300px] lg:text-[230px] lg:leading-[130px] md:text-[200px] md:leading-[150px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[180px] flex flex-col gap-10 md:gap-0  td:text-[200px] td:leading-[120px]">
+				<div className="w-[70%] lg:w-[60%] td:w-[60%] top-10 min-h-screen relative">
+					<div className="left-0 lg:left-24 absolute origin-top-left text-center text-white text-[300px] lg:text-[180px] lg:leading-[90px] md:text-[200px] md:leading-[150px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[180px] flex flex-col gap-10 md:gap-0  td:text-[200px] td:leading-[120px]">
 						{["p", "o", "r"].map((item, i) => (
 							<motion.h1
 								initial={{
 									scale: 0,
 									opacity: 0,
-									y: -100,
+									y: -50,
 								}}
 								whileInView={{
 									scale: 1,
@@ -44,7 +44,7 @@ export default function Hero() {
 							</motion.h1>
 						))}
 					</div>
-					<div className="flex md:-right-24 lg:right-0 absolute bottom-[30%] right-[16%] lg:bottom-[33%] origin-bottom rotate-90 text-center text-white text-[300px] lg:text-[230px] lg:leading-[130px] md:text-[200px] md:leading-[150px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[180px] td:text-[200px] td:leading-[120px]  td:bottom-[35%] td:right-0">
+					<div className="flex md:-right-24 lg:right-10 absolute bottom-[30%] right-[16%] lg:bottom-[33%] origin-bottom rotate-90 text-center text-white text-[300px] lg:text-[180px] lg:leading-[90px] md:text-[200px] md:leading-[150px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[180px] td:text-[200px] td:leading-[120px]  td:bottom-[35%] td:right-0">
 						{["l", "i", "o"].map((item, i) => (
 							<motion.h1
 								initial={{
@@ -64,13 +64,13 @@ export default function Hero() {
 							</motion.h1>
 						))}
 					</div>
-					<div className="flex md:mt-2 md:left-[240px] left-[240px] top-[420px] md:top-1/4 lg:top-[44%] absolute text-center text-white text-[300px] lg:text-[230px] lg:leading-[130px] md:text-[200px] md:leading-[150px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[221.25px]  td:text-[200px] td:leading-[120px] td:top-[44%] td:left-[150px] td:ml-5">
+					<div className="flex md:mt-2 md:left-[240px] left-[240px] top-[420px] md:top-1/4 lg:top-[44%] absolute text-center text-white text-[300px] lg:text-[180px] lg:leading-[90px] md:text-[200px] md:leading-[150px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[221.25px]  td:text-[200px] td:leading-[120px] td:top-[44%] td:left-[150px] td:ml-5">
 						{["t", "f", "o"].map((item, i) => (
 							<motion.h1
 								initial={{
 									scale: 0,
 									opacity: 0,
-									x: -100,
+									x: -50,
 								}}
 								whileInView={{
 									scale: 1,
@@ -84,10 +84,10 @@ export default function Hero() {
 							</motion.h1>
 						))}
 					</div>
-					<div className="right-[21%] top-[340px] absolute text-center text-black text-[80px] lg:text-[50px] td:text-[30px] td:top-[33%] td:right-10 lg:top-[30%] lg:right-[0%] font-normal font-PlayfairDisplay leading-[100px]">
+					<div className="right-[21%] top-[340px] absolute text-center text-black text-[80px] lg:text-[50px] td:text-[30px] td:top-[33%] td:right-10 lg:top-[30%] lg:right-[10%] font-normal font-PlayfairDisplay leading-[100px]">
 						<TextMask>{phares4}</TextMask>
 					</div>
-					<div className="left-0 top-[660px] absolute text-center text-black text-[80px] lg:text-[50px] td:text-[30px]  td:left-[0%] td:top-[60%] lg:left-[0%] lg:top-[62%] font-normal font-PlayfairDisplay leading-[100px]">
+					<div className="left-0 lg:left-24 top-[660px] absolute text-center text-black text-[80px] lg:text-[50px] td:text-[30px]  td:left-[0%] td:top-[60%] lg:top-[58%] font-normal font-PlayfairDisplay leading-[100px]">
 						<TextMask>{phares5}</TextMask>
 					</div>
 				</div>
