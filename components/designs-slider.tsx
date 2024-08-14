@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
-const imgs = ["/dragImg.png", "/dragImg.png", "/dragImg.png", "/dragImg.png"];
+const imgs = ["/slider1.jpg", "/slider2.jpg", "/slider3.jpg", "/slider4.jpg"];
 
 const ONE_SECOND = 500;
 const AUTO_DELAY = ONE_SECOND * 10;
