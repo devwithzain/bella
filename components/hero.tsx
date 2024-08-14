@@ -84,10 +84,10 @@ export default function Hero() {
 							</motion.h1>
 						))}
 					</div>
-					<div className="right-[21%] top-[340px] absolute text-center text-black text-[80px] lg:text-[50px] td:text-[30px] td:top-[33%] td:right-10 lg:top-[30%] lg:right-[10%] font-normal font-PlayfairDisplay leading-[100px]">
+					<div className="right-[21%] top-[340px] absolute text-center text-black text-[80px] lg:text-[50px] td:text-[30px] td:top-[33%] td:right-10 lg:top-[30%] lg:right-[10%] font-normal font-BlackJack leading-[100px]">
 						<TextMask>{phares4}</TextMask>
 					</div>
-					<div className="left-0 lg:left-24 top-[660px] absolute text-center text-black text-[80px] lg:text-[50px] td:text-[30px]  td:left-[0%] td:top-[60%] lg:top-[58%] font-normal font-PlayfairDisplay leading-[100px]">
+					<div className="left-0 lg:left-24 top-[660px] absolute text-center text-black text-[80px] lg:text-[50px] td:text-[30px]  td:left-[0%] td:top-[60%] lg:top-[58%] font-normal font-BlackJack leading-[100px]">
 						<TextMask>{phares5}</TextMask>
 					</div>
 				</div>
@@ -105,7 +105,7 @@ export default function Hero() {
 					</h1>
 				</div>
 			</div>
-			<div className="w-full flex items-center justify-between gap-5 py-5 padding-x bg-white">
+			<div className="w-full flex items-center justify-between gap-5 py-5 padding-x bg-[#F4F4F4]">
 				<div>
 					<Link
 						href="/"
@@ -130,7 +130,7 @@ export default function Hero() {
 					</div>
 				</div>
 			</div>
-			<div className="w-full flex justify-between gap-5 bg-white items-center padding-x py-20 xm:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse">
+			<div className="w-full flex justify-between gap-5 bg-[#F4F4F4] items-center padding-x py-20 xm:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse">
 				<motion.div
 					initial={{ opacity: 0, scale: 0.5 }}
 					whileInView={{ opacity: 1, scale: 1 }}

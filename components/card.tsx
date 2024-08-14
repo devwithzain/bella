@@ -23,11 +23,11 @@ export default function Card() {
 	const phares11 = ["Indesign"];
 	return (
 		<>
-			<div className="h-full w-full relative shrink-0 bg-[#BBB0D2]">
+			<div className="h-full w-full relative shrink-0">
 				<div className="w-full h-full absolute inset-0 z-10 flex justify-between">
 					<div className="w-full h-full flex items-center justify-between">
 						<div className="w-full h-full items-end p-10 flex flex-1">
-							<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-BananasFont font-extrabold uppercase text-primary leading-none">
+							<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
 								<TextMask>{phares1}</TextMask>
 							</h1>
 						</div>
@@ -49,10 +49,10 @@ export default function Card() {
 						</div>
 						<div className="w-full h-full p-10 flex flex-1 items-start">
 							<div className="flex flex-col items-center relative z-[99]">
-								<h1 className="text-primary/20 text-[232px] td:text-[60px] lg:text-[80px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
+								<h1 className="text-[#2E2E2E]/10 text-[200px] td:text-[60px] lg:text-[80px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
 									<TextMask>{phares2}</TextMask>
 								</h1>
-								<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-BananasFont font-extrabold uppercase text-primary leading-none">
+								<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
 									<TextMask>{phares3}</TextMask>
 								</h1>
 							</div>
@@ -60,13 +60,13 @@ export default function Card() {
 					</div>
 				</div>
 			</div>
-			<div className="w-[50%] h-full flex-col flex items-center justify-between bg-[#BBB0D2] shrink-0 ">
+			<div className="w-[50%] h-full flex-col flex items-center justify-between shrink-0 ">
 				<div className="w-full h-full flex items-center justify-center flex-col">
 					<div className="flex flex-col items-center relative z-[99]">
-						<h1 className="text-primary/20 text-[232px] td:text-[60px] lg:text-[80px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
+						<h1 className="text-[#2E2E2E]/10 text-[200px] td:text-[60px] lg:text-[80px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
 							<TextMask>{phares4}</TextMask>
 						</h1>
-						<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-BananasFont font-extrabold uppercase text-primary leading-none">
+						<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
 							<TextMask>{phares5}</TextMask>
 						</h1>
 					</div>
@@ -86,7 +86,7 @@ export default function Card() {
 					</motion.div>
 				</div>
 			</div>
-			<div className="w-[50%] h-full flex-col flex items-center justify-between bg-[#BBB0D2] shrink-0">
+			<div className="w-[50%] h-full flex-col flex items-center justify-between shrink-0">
 				<div className="w-full h-full flex items-center justify-center flex-col">
 					<motion.div
 						initial={{ opacity: 0, scale: 0.5 }}
@@ -103,22 +103,22 @@ export default function Card() {
 						/>
 					</motion.div>
 					<div className="flex flex-col items-center relative z-[99]">
-						<h1 className="text-primary/20 text-[232px] td:text-[60px] lg:text-[80px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
+						<h1 className="text-[#2E2E2E]/10 text-[200px] td:text-[60px] lg:text-[80px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
 							<TextMask>{phares6}</TextMask>
 						</h1>
-						<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-BananasFont font-extrabold uppercase text-primary leading-none">
+						<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
 							<TextMask>{phares7}</TextMask>
 						</h1>
 					</div>
 				</div>
 			</div>
-			<div className="w-[50%] h-full flex-col flex items-center justify-between bg-[#BBB0D2] shrink-0">
+			<div className="w-[50%] h-full flex-col flex items-center justify-between shrink-0">
 				<div className="w-full h-full flex items-center justify-center flex-col">
 					<div className="flex flex-col items-center relative z-[99]">
-						<h1 className="text-primary/20 text-[232px] td:text-[60px] lg:text-[80px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
+						<h1 className="text-[#2E2E2E]/10 text-[200px] td:text-[60px] lg:text-[80px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
 							<TextMask>{phares8}</TextMask>
 						</h1>
-						<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-BananasFont font-extrabold uppercase text-primary leading-none">
+						<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
 							<TextMask>{phares9}</TextMask>
 						</h1>
 					</div>
@@ -138,7 +138,7 @@ export default function Card() {
 					</motion.div>
 				</div>
 			</div>
-			<div className="w-[50%] h-full flex-col flex items-center justify-between bg-[#BBB0D2] shrink-0">
+			<div className="w-[50%] h-full flex-col flex items-center justify-between shrink-0">
 				<div className="w-full h-full flex items-center justify-center flex-col">
 					<motion.div
 						initial={{ opacity: 0, scale: 0.5 }}
@@ -155,10 +155,10 @@ export default function Card() {
 						/>
 					</motion.div>
 					<div className="flex flex-col items-center relative z-[99]">
-						<h1 className="text-primary/20 text-[232px] td:text-[60px] lg:text-[80px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
+						<h1 className="text-[#2E2E2E]/10 text-[200px] td:text-[60px] lg:text-[80px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
 							<TextMask>{phares10}</TextMask>
 						</h1>
-						<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-BananasFont font-extrabold uppercase text-primary leading-none">
+						<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
 							<TextMask>{phares11}</TextMask>
 						</h1>
 					</div>
