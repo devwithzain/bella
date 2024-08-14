@@ -13,8 +13,6 @@ export default function Hero() {
 	const phares3 = [
 		"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
 	];
-	const phares4 = ["Product Designer"];
-	const phares5 = ["Bella Han"];
 
 	const phares6 = ["Bella Han"];
 	const phares7 = ["Product Designer"];
@@ -83,12 +81,6 @@ export default function Hero() {
 								{item}
 							</motion.h1>
 						))}
-					</div>
-					<div className="right-[21%] top-[340px] absolute text-center text-black text-[80px] lg:text-[50px] td:text-[30px] td:top-[33%] td:right-10 lg:top-[30%] lg:right-[10%] font-normal font-BlackJack leading-[100px]">
-						<TextMask>{phares4}</TextMask>
-					</div>
-					<div className="left-0 lg:left-24 top-[660px] absolute text-center text-black text-[80px] lg:text-[50px] td:text-[30px]  td:left-[0%] td:top-[60%] lg:top-[58%] font-normal font-BlackJack leading-[100px]">
-						<TextMask>{phares5}</TextMask>
 					</div>
 				</div>
 			</div>

@@ -38,8 +38,6 @@ export default function App() {
 				<>
 					<Hero />
 					<HorizontalSlider />
-					<Portfolio />
-					<DesignsSlider />
 					<Footer />
 				</>
 			)}
