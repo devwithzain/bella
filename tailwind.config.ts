@@ -17,6 +17,7 @@ const config: Config = {
       "Poppins": ["Poppins", "sans-serif"],
       "BananasFont": ["BananasFont", "sans-serif"],
       "PlayfairDisplay": ["PlayfairDisplay", "sans-serif"],
+      "IBMPlex": ["IBMPlex", "sans-serif"],
     },
     screens: {
       xm: { max: "400px" },
