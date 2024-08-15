@@ -8,93 +8,228 @@ import { TextMask } from "@/animations";
 export default function Hero() {
 	const phares1 = ["Welcome To My", "Creative Journey!"];
 	const phares2 = [
-		"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book.",
+		"Hi, I'm Bella! I graduated from Parsons School of Design with a major in Product Design and a minor in Communication Design. My curiosity about how things work has been a driving force behind my passion for creating and innovating new objects.",
 	];
 	const phares3 = [
-		"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+		"I thrive on the challenge of taking abstract ideas and transforming them into tangible, finished products that people can use and enjoy. Whether it's experimenting with different materials, exploring new design techniques, or collaborating with others, I'm always eager to push the boundaries of what's possible in design.",
 	];
-
-	const phares6 = ["Bella Han"];
-	const phares7 = ["Product Designer"];
-	const phares8 = ["Portfolio"];
+	const phares4 = [
+		"Design, for me, is more than just a career—it's a journey of continuous learning and growth. I'm constantly seeking new challenges and opportunities to expand my skills and bring fresh, exciting ideas to life.",
+	];
+	const phares5 = [
+		"Thank you for visiting my page, and I look forward to connecting with you!",
+	];
 
 	return (
 		<>
-			<div className="w-full flex items-center justify-center bg-[#bbb0d2] sm:hidden xm:hidden">
-				<div className="w-[70%] lg:w-[60%] td:w-[60%] top-10 min-h-screen relative">
-					<div className="left-0 lg:left-24 absolute origin-top-left text-center text-white text-[300px] lg:text-[180px] lg:leading-[90px] md:text-[200px] md:leading-[150px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[180px] flex flex-col gap-10 md:gap-0  td:text-[200px] td:leading-[120px]">
-						{["p", "o", "r"].map((item, i) => (
-							<motion.h1
+			<div className="w-full h-screen bg-[#bbb0d2] flex items-center justify-center">
+				<div className="flex flex-col gap-2">
+					<div className="w-fit h-fit items-start justify-start flex flex-col gap-2">
+						<div className="w-fit">
+							<motion.div
 								initial={{
-									scale: 0,
+									width: 0,
 									opacity: 0,
-									y: -50,
 								}}
 								whileInView={{
-									scale: 1,
+									width: "auto",
 									opacity: 1,
-									y: 0,
 								}}
+								transition={{ duration: 0.5, delay: 1, ease: "easeInOut" }}
 								viewport={{ once: true }}
-								transition={{ delay: i * 0.5 }}
-								key={i}>
-								{item}
-							</motion.h1>
-						))}
-					</div>
-					<div className="flex md:-right-24 lg:right-10 absolute bottom-[30%] right-[16%] lg:bottom-[33%] origin-bottom rotate-90 text-center text-white text-[300px] lg:text-[180px] lg:leading-[90px] md:text-[200px] md:leading-[150px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[180px] td:text-[200px] td:leading-[120px]  td:bottom-[35%] td:right-0">
-						{["l", "i", "o"].map((item, i) => (
-							<motion.h1
+								className="flex flex-col gap-2">
+								<Image
+									src={"/p.png"}
+									alt="a"
+									width={200}
+									height={200}
+									className="heroImg"
+								/>
+							</motion.div>
+						</div>
+						<div className="w-fit">
+							<motion.div
 								initial={{
-									scale: 0,
+									width: 0,
 									opacity: 0,
-									y: 0,
 								}}
 								whileInView={{
-									scale: 1,
+									width: "auto",
 									opacity: 1,
-									y: 0,
 								}}
+								transition={{ duration: 0.5, delay: 1.5, ease: "easeInOut" }}
 								viewport={{ once: true }}
-								transition={{ duration: 0.5, delay: 2 + i * 0.5 }}
-								key={i}>
-								{item}
-							</motion.h1>
-						))}
+								className="flex flex-col gap-2">
+								<Image
+									src={"/o.png"}
+									alt="a"
+									width={200}
+									height={200}
+									className="heroImg"
+								/>
+							</motion.div>
+						</div>
 					</div>
-					<div className="flex md:mt-2 md:left-[240px] left-[240px] top-[420px] md:top-1/4 lg:top-[44%] absolute text-center text-white text-[300px] lg:text-[180px] lg:leading-[90px] md:text-[200px] md:leading-[150px] sm:text-[100px] xm:text-[100px] font-normal font-BananasFont uppercase leading-[221.25px]  td:text-[200px] td:leading-[120px] td:top-[44%] td:left-[150px] td:ml-5">
-						{["t", "f", "o"].map((item, i) => (
-							<motion.h1
-								initial={{
-									scale: 0,
-									opacity: 0,
-									x: -50,
-								}}
-								whileInView={{
-									scale: 1,
-									opacity: 1,
-									x: 0,
-								}}
-								viewport={{ once: true }}
-								transition={{ duration: 0.5, delay: 1 + i * 0.5 }}
-								key={i}>
-								{item}
-							</motion.h1>
-						))}
+					<div className="flex gap-2">
+						<div className="w-fit flex gap-2 h-fit items-start justify-start">
+							<div className="w-fit">
+								<motion.div
+									initial={{
+										width: 0,
+										opacity: 0,
+									}}
+									whileInView={{
+										width: "auto",
+										opacity: 1,
+									}}
+									transition={{ duration: 0.5, delay: 2, ease: "easeInOut" }}
+									viewport={{ once: true }}
+									className="flex flex-col gap-2">
+									<Image
+										src={"/r.png"}
+										alt="a"
+										width={200}
+										height={200}
+										className="heroImg"
+									/>
+								</motion.div>
+							</div>
+							<div className="w-fit">
+								<motion.div
+									initial={{
+										width: 0,
+										opacity: 0,
+									}}
+									whileInView={{
+										width: "auto",
+										opacity: 1,
+									}}
+									transition={{ duration: 0.5, delay: 2.5, ease: "easeInOut" }}
+									viewport={{ once: true }}
+									className="flex flex-col gap-2">
+									<Image
+										src={"/t.png"}
+										alt="a"
+										width={180}
+										height={180}
+										className="heroImg"
+									/>
+								</motion.div>
+							</div>
+							<div className="w-fit">
+								<motion.div
+									initial={{
+										width: 0,
+										opacity: 0,
+									}}
+									whileInView={{
+										width: "auto",
+										opacity: 1,
+									}}
+									transition={{ duration: 0.5, delay: 3, ease: "easeInOut" }}
+									viewport={{ once: true }}
+									className="flex flex-col gap-2">
+									<Image
+										src={"/f.png"}
+										alt="a"
+										width={200}
+										height={200}
+										className="heroImg"
+									/>
+								</motion.div>
+							</div>
+							<div className="w-fit">
+								<motion.div
+									initial={{
+										width: 0,
+										opacity: 0,
+									}}
+									whileInView={{
+										width: "auto",
+										opacity: 1,
+									}}
+									transition={{ duration: 0.5, delay: 3.5, ease: "easeInOut" }}
+									viewport={{ once: true }}
+									className="flex flex-col gap-2">
+									<Image
+										src={"/o.png"}
+										alt="a"
+										width={200}
+										height={200}
+										className="heroImg"
+									/>
+								</motion.div>
+							</div>
+						</div>
+						<div className="w-fit flex flex-col gap-2 h-fit items-center justify-center">
+							<div className="w-fit">
+								<motion.div
+									initial={{
+										width: 0,
+										opacity: 0,
+									}}
+									whileInView={{
+										width: "auto",
+										opacity: 1,
+									}}
+									transition={{ duration: 0.5, delay: 4, ease: "easeInOut" }}
+									viewport={{ once: true }}
+									className="flex flex-col gap-2">
+									<Image
+										src={"/l.png"}
+										alt="a"
+										width={200}
+										height={200}
+										className="heroImg"
+									/>
+								</motion.div>
+							</div>
+							<div className="w-fit">
+								<motion.div
+									initial={{
+										width: 0,
+										opacity: 0,
+									}}
+									whileInView={{
+										width: "auto",
+										opacity: 1,
+									}}
+									transition={{ duration: 0.5, delay: 4.5, ease: "easeInOut" }}
+									viewport={{ once: true }}
+									className="flex flex-col gap-2">
+									<Image
+										src={"/i.png"}
+										alt="a"
+										width={200}
+										height={200}
+										className="heroImg"
+									/>
+								</motion.div>
+							</div>
+							<div className="w-fit">
+								<motion.div
+									initial={{
+										width: 0,
+										opacity: 0,
+									}}
+									whileInView={{
+										width: "auto",
+										opacity: 1,
+									}}
+									transition={{ duration: 0.5, delay: 5, ease: "easeInOut" }}
+									viewport={{ once: true }}
+									className="flex flex-col gap-2">
+									<Image
+										src={"/o.png"}
+										alt="a"
+										width={200}
+										height={200}
+										className="heroImg"
+									/>
+								</motion.div>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-			<div className="w-full h-[60vh] padding-x hidden flex-col justify-center gap-5 sm:flex xm:flex bg-[#bbb0d2]">
-				<h1 className="text-primary text-[50px] font-semibold font-BananasFont leading-none">
-					<TextMask>{phares6}</TextMask>
-				</h1>
-				<div className="flex flex-col gap-5">
-					<h1 className="text-primary text-[50px] font-semibold font-BananasFont leading-none">
-						<TextMask>{phares7}</TextMask>
-					</h1>
-					<h1 className="text-primary text-[50px] font-semibold font-BananasFont leading-none">
-						<TextMask>{phares8}</TextMask>
-					</h1>
 				</div>
 			</div>
 			<div className="w-full flex items-center justify-between gap-5 py-5 padding-x bg-[#F4F4F4]">
@@ -140,16 +275,22 @@ export default function Hero() {
 				<div className="flex flex-1">
 					<div className="flex flex-col gap-5">
 						<div>
-							<h1 className="text-black text-[95px] td:text-[50px] lg:text-[65px] md:text-[40px] sm:text-[30px] xm:text-[30px] font-semibold font-Poppins leading-none">
+							<h1 className="text-black text-[95px] td:text-[50px] lg:text-[65px] md:text-[40px] mht:text-[30px] sm:text-[30px] xm:text-[30px] font-semibold font-Poppins leading-tight">
 								<TextMask>{phares1}</TextMask>
 							</h1>
 						</div>
 						<div className="flex flex-col gap-5">
-							<p className="text-black text-[24px] td:text-[16px] lg:text-[20px] xm:text-[18px] sm:text-[18px] leading-[36px] font-normal font-Poppins">
+							<p className="text-black text-[24px] td:text-[16px] lg:text-[20px] xm:text-[18px] sm:text-[18px] mht:text-[16px] leading-tight font-normal font-Poppins">
 								<TextMask>{phares2}</TextMask>
 							</p>
-							<p className="text-black text-[24px] td:text-[16px] lg:text-[20px] xm:text-[18px] sm:text-[18px] leading-[36px] font-normal font-Poppins">
+							<p className="text-black text-[24px] td:text-[16px] lg:text-[20px] xm:text-[18px] mht:text-[16px] leading-tight font-normal font-Poppins">
 								<TextMask>{phares3}</TextMask>
+							</p>
+							<p className="text-black text-[24px] td:text-[16px] lg:text-[20px] xm:text-[18px] mht:text-[16px] leading-tight font-normal font-Poppins">
+								<TextMask>{phares4}</TextMask>
+							</p>
+							<p className="text-black text-[24px] td:text-[16px] lg:text-[20px] xm:text-[18px] mht:text-[16px] leading-tight font-normal font-Poppins">
+								<TextMask>{phares5}</TextMask>
 							</p>
 						</div>
 					</div>

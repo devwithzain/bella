@@ -66,7 +66,7 @@ export default function HorizontalScrollCarousel() {
 						height="2004"
 						viewBox="0 0 4530 2004"
 						fill="none"
-						className="w-auto h-auto lg:h-[1450px] td:h-[1300px] top-[-110%] td:top-[-90%] td:left-[10%] lg:left-[5%] lg:top-[-140%] overflow-visible left-[5%] shrink-0 absolute z-[9]">
+						className="w-auto h-auto xlht:!h-[1350px] xlht:!top-[-125%] xlht:!left-[8%]  mht:!h-[1050px] mht:!top-[-45%] mht:!left-[8%]  sdht:!h-[1500px] sdht:!top-[-70%] sdht:!left-[5%] mdd:!h-[1700px] mdd:!top-[-90%] mdd:!left-[5%] lht:!h-[1280px] lht:top-[-80%] lht:left-[8%] td:h-[1300px] top-[-110%] td:top-[-90%] td:left-[10%] overflow-visible left-[5%] shrink-0 absolute z-[9]">
 						<path
 							className="path"
 							ref={pathRef}

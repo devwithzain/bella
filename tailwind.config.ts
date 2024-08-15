@@ -23,14 +23,16 @@ const config: Config = {
     screens: {
       xm: { max: "400px" },
       sm: { min: "401px", max: "768px" },
-      md: { min: "769px", max: "1024px" },
-      // td: { min: "1025px", max: "1199px" },
-      // lg: { min: "1321px", max: "1490px" },
-      lg: { min: "1025px", max: "1490px" },
-      // mdl: { min: "1000px", max: "1100px" },
-      // tds: { min: "1200px", max: "1365px" },
-      // lgd: { min: "1366px", max: "1599px" },
+      md: { min: "769px", max: "1023px" },
+      lg: { min: "1031px", max: "1490px" },
       xl: { min: "1491px" },
+
+      mht: { min: "1024px", max: "1030px" },
+      lht: { min: "1279px", max: "1281px" },
+      xlht: { min: "1366px", max: "1366px" },
+      sdht: { min: "1440px", max: "1445px" },
+      slr: { min: "1366px", max: "1370px" },
+      mdd: { min: "1660px", max: "1670px" },
     }
   },
   plugins: [],

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
 import {
 	afterEffect,
 	autodesk,
@@ -7,6 +6,7 @@ import {
 	indesign,
 	photoshop,
 } from "@/public";
+import { motion } from "framer-motion";
 import { TextMask } from "@/animations";
 
 export default function Card() {
@@ -27,7 +27,7 @@ export default function Card() {
 				<div className="w-full h-full absolute inset-0 z-10 flex justify-between">
 					<div className="w-full h-full flex items-center justify-between">
 						<div className="w-full h-full items-end p-10 flex flex-1">
-							<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
+							<h1 className="text-[120px] td:text-[60px] lg:text-[80px] mht:text-[60px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
 								<TextMask>{phares1}</TextMask>
 							</h1>
 						</div>
@@ -37,9 +37,9 @@ export default function Card() {
 								whileInView={{ opacity: 1, scale: 1 }}
 								transition={{ duration: 0.5, ease: "easeInOut" }}
 								viewport={{ once: true }}
-								className="w-[350px] h-[350px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] md:w-[250px] md:h-[250px] rounded-full border-4 border-black flex items-center justify-center bg-primary z-50">
+								className="w-[350px] h-[350px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] mht:w-[200px] mht:h-[200px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#bbb0d2] flex items-center justify-center bg-primary z-50">
 								<Image
-									className="lg:w-[100px] td:h-[80px] lg:h-[100px] md:w-[100px] md:h-[100px] "
+									className="lg:w-[100px] td:h-[80px] lg:h-[100px] mht:h-[80px] md:w-[100px] md:h-[100px] "
 									src={autodesk}
 									alt="Image"
 									width={150}
@@ -49,10 +49,10 @@ export default function Card() {
 						</div>
 						<div className="w-full h-full p-10 flex flex-1 items-start">
 							<div className="flex flex-col items-center relative z-[99]">
-								<h1 className="text-[#2E2E2E]/10 text-[200px] td:text-[60px] lg:text-[80px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
+								<h1 className="text-[#2E2E2E]/10 text-[200px] td:text-[60px] lg:text-[80px] mht:text-[60px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
 									<TextMask>{phares2}</TextMask>
 								</h1>
-								<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
+								<h1 className="text-[120px] td:text-[60px] lg:text-[80px] mht:text-[60px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
 									<TextMask>{phares3}</TextMask>
 								</h1>
 							</div>
@@ -63,10 +63,10 @@ export default function Card() {
 			<div className="w-[50%] h-full flex-col flex items-center justify-between shrink-0 ">
 				<div className="w-full h-full flex items-center justify-center flex-col">
 					<div className="flex flex-col items-center relative z-[99]">
-						<h1 className="text-[#2E2E2E]/10 text-[200px] td:text-[60px] lg:text-[80px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
+						<h1 className="text-[#2E2E2E]/10 text-[200px] td:text-[60px] lg:text-[80px] mht:text-[60px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
 							<TextMask>{phares4}</TextMask>
 						</h1>
-						<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
+						<h1 className="text-[120px] td:text-[60px] lg:text-[80px] mht:text-[60px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
 							<TextMask>{phares5}</TextMask>
 						</h1>
 					</div>
@@ -75,9 +75,9 @@ export default function Card() {
 						whileInView={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 0.5, ease: "easeInOut" }}
 						viewport={{ once: true }}
-						className="w-[350px] h-[350px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] md:w-[250px] md:h-[250px] rounded-full border-4 border-black flex items-center justify-center bg-primary z-50">
+						className="w-[350px] h-[350px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] mht:w-[200px] mht:h-[200px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#bbb0d2] flex items-center justify-center bg-primary z-50">
 						<Image
-							className="lg:w-[100px] td:h-[80px] lg:h-[100px] md:w-[100px] md:h-[100px] "
+							className="lg:w-[100px] td:h-[80px] lg:h-[100px] mht:h-[80px] md:w-[100px] md:h-[100px] "
 							src={afterEffect}
 							alt="Image"
 							width={200}
@@ -93,9 +93,9 @@ export default function Card() {
 						whileInView={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 0.5, ease: "easeInOut" }}
 						viewport={{ once: true }}
-						className="w-[350px] h-[350px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] md:w-[250px] md:h-[250px] rounded-full border-4 border-black flex items-center justify-center bg-primary z-50">
+						className="w-[350px] h-[350px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] mht:w-[200px] mht:h-[200px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#bbb0d2] flex items-center justify-center bg-primary z-50">
 						<Image
-							className="lg:w-[100px] td:h-[80px] lg:h-[100px] md:w-[100px] md:h-[100px] "
+							className="lg:w-[100px] td:h-[80px] lg:h-[100px] mht:h-[80px] md:w-[100px] md:h-[100px] "
 							src={illustration}
 							alt="Image"
 							width={200}
@@ -103,10 +103,10 @@ export default function Card() {
 						/>
 					</motion.div>
 					<div className="flex flex-col items-center relative z-[99]">
-						<h1 className="text-[#2E2E2E]/10 text-[200px] td:text-[60px] lg:text-[80px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
+						<h1 className="text-[#2E2E2E]/10 text-[200px] td:text-[60px] lg:text-[80px] mht:text-[60px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
 							<TextMask>{phares6}</TextMask>
 						</h1>
-						<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
+						<h1 className="text-[120px] td:text-[60px] lg:text-[80px] mht:text-[60px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
 							<TextMask>{phares7}</TextMask>
 						</h1>
 					</div>
@@ -115,10 +115,10 @@ export default function Card() {
 			<div className="w-[50%] h-full flex-col flex items-center justify-between shrink-0">
 				<div className="w-full h-full flex items-center justify-center flex-col">
 					<div className="flex flex-col items-center relative z-[99]">
-						<h1 className="text-[#2E2E2E]/10 text-[200px] td:text-[60px] lg:text-[80px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
+						<h1 className="text-[#2E2E2E]/10 text-[200px] td:text-[60px] lg:text-[80px] mht:text-[60px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
 							<TextMask>{phares8}</TextMask>
 						</h1>
-						<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
+						<h1 className="text-[120px] td:text-[60px] lg:text-[80px] mht:text-[60px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
 							<TextMask>{phares9}</TextMask>
 						</h1>
 					</div>
@@ -127,9 +127,9 @@ export default function Card() {
 						whileInView={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 0.5, ease: "easeInOut" }}
 						viewport={{ once: true }}
-						className="w-[350px] h-[350px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] md:w-[250px] md:h-[250px] rounded-full border-4 border-black flex items-center justify-center bg-primary z-50">
+						className="w-[350px] h-[350px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] mht:w-[200px] mht:h-[200px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#bbb0d2] flex items-center justify-center bg-primary z-50">
 						<Image
-							className="lg:w-[100px] td:h-[80px] lg:h-[100px] md:w-[100px] md:h-[100px] "
+							className="lg:w-[100px] td:h-[80px] lg:h-[100px] mht:h-[80px] md:w-[100px] md:h-[100px] "
 							src={photoshop}
 							alt="Image"
 							width={200}
@@ -145,9 +145,9 @@ export default function Card() {
 						whileInView={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 0.5, ease: "easeInOut" }}
 						viewport={{ once: true }}
-						className="w-[350px] h-[350px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] md:w-[250px] md:h-[250px] rounded-full border-4 border-black flex items-center justify-center bg-primary z-50">
+						className="w-[350px] h-[350px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] mht:w-[200px] mht:h-[200px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#bbb0d2] flex items-center justify-center bg-primary z-50">
 						<Image
-							className="lg:w-[100px] td:h-[80px] lg:h-[100px] md:w-[100px] md:h-[100px] "
+							className="lg:w-[100px] td:h-[80px] lg:h-[100px] mht:h-[80px] md:w-[100px] md:h-[100px] "
 							src={indesign}
 							alt="Image"
 							width={200}
@@ -155,10 +155,10 @@ export default function Card() {
 						/>
 					</motion.div>
 					<div className="flex flex-col items-center relative z-[99]">
-						<h1 className="text-[#2E2E2E]/10 text-[200px] td:text-[60px] lg:text-[80px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
+						<h1 className="text-[#2E2E2E]/10 text-[200px] td:text-[60px] lg:text-[80px] mht:text-[60px] md:text-[70px] sm:text-[40px] xm:text-[40px] font-extrabold leading-none  -mb-10 lg:mb-0 md:mb-0">
 							<TextMask>{phares10}</TextMask>
 						</h1>
-						<h1 className="text-[120px] td:text-[60px] lg:text-[80px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
+						<h1 className="text-[120px] td:text-[60px] lg:text-[80px] mht:text-[60px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-none">
 							<TextMask>{phares11}</TextMask>
 						</h1>
 					</div>
