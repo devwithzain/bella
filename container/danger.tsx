@@ -17,7 +17,7 @@ export default function Danger() {
 	return (
 		<div className="w-full padding-x py-10">
 			<div className="w-full h-full flex items-end justify-center gap-10 md:flex-wrap md:items-start md:justify-start xm:flex-col sm:flex-col xm:items-start sm:items-start">
-				<div className="flex gap-5 items-center xm:w-full sm:w-full xm:gap-0 sm:gap-0">
+				<div className="flex gap-5 items-center xm:w-full sm:w-full">
 					<motion.div
 						className="xm:hidden sm:hidden"
 						variants={workDangerAnimation1}
@@ -30,7 +30,7 @@ export default function Danger() {
 							className="w-[60px] "
 						/>
 					</motion.div>
-					<div className="flex flex-col gap-2">
+					<div className="flex flex-col gap-2 xm:w-full sm:w-full">
 						<div className="flex justify-between items-center">
 							<motion.div
 								variants={workDangerAnimation1}
@@ -40,7 +40,7 @@ export default function Danger() {
 								<h1 className="text-[50px] lg:text-[30px] md:text-[30px] xm:text-[25px] sm:text-[25px] font-IBMPlex leading-tight">
 									99%
 								</h1>
-								<p className="text-[18px] lg:text-[16px] xm:text-[16px] sm:text-[25px] font-Poppins leading-tight">
+								<p className="text-[18px] lg:text-[16px] xm:text-[16px] sm:text-[16px] font-Poppins leading-tight">
 									of all the <br /> toothbrushes in the <br /> world are made
 									from <br />
 									plastic.
@@ -68,7 +68,7 @@ export default function Danger() {
 								<h1 className="text-[50px] lg:text-[30px] md:text-[30px] xm:text-[25px] sm:text-[25px] font-IBMPlex leading-tight">
 									1 Billion
 								</h1>
-								<p className="text-[18px] lg:text-[16px] xm:text-[16px] sm:text-[25px] font-Poppins leading-tight">
+								<p className="text-[18px] lg:text-[16px] xm:text-[16px] sm:text-[16px] font-Poppins leading-tight">
 									plastic toothbrushes <br /> are thrown away <br /> every year
 									in the <br /> United States.
 								</p>
@@ -94,7 +94,7 @@ export default function Danger() {
 								<h1 className="text-[50px] lg:text-[30px] md:text-[30px] xm:text-[25px] sm:text-[25px] font-IBMPlex leading-tight">
 									5 Trillion
 								</h1>
-								<p className="text-[18px] lg:text-[16px] xm:text-[16px] sm:text-[25px] font-Poppins leading-tight">
+								<p className="text-[18px] lg:text-[16px] xm:text-[16px] sm:text-[16px] font-Poppins leading-tight">
 									end up in landfills <br /> and oceans.
 								</p>
 							</motion.div>
@@ -112,7 +112,7 @@ export default function Danger() {
 						</div>
 					</div>
 				</div>
-				<div className="flex items-center xm:w-full sm:w-full">
+				<div className="flex items-center xm:w-full sm:w-full gap-5">
 					<motion.div
 						variants={workDangerAnimation1}
 						initial="initial"
@@ -124,7 +124,7 @@ export default function Danger() {
 							className="w-[160px] xm:hidden sm:hidden"
 						/>
 					</motion.div>
-					<div className="flex flex-col gap-2">
+					<div className="flex flex-col gap-2 xm:w-full sm:w-full">
 						<div className="flex justify-between items-center">
 							<motion.div
 								variants={workDangerAnimation2}
@@ -134,7 +134,7 @@ export default function Danger() {
 								<h1 className="text-[50px] lg:text-[30px] md:text-[30px] xm:text-[25px] sm:text-[25px] font-IBMPlex leading-tight">
 									2 Billion
 								</h1>
-								<p className="text-[18px] lg:text-[16px] xm:text-[16px] sm:text-[25px] font-Poppins leading-tight">
+								<p className="text-[18px] lg:text-[16px] xm:text-[16px] sm:text-[16px] font-Poppins leading-tight">
 									razors and refill <br /> blades get tossed in <br /> the U.S.
 									each year.
 								</p>
@@ -157,7 +157,7 @@ export default function Danger() {
 								initial="initial"
 								whileInView="enter"
 								viewport={{ once: true }}>
-								<p className="text-[18px] lg:text-[16px] xm:text-[16px] sm:text-[25px] font-Poppins leading-tight">
+								<p className="text-[18px] lg:text-[16px] xm:text-[16px] sm:text-[16px] font-Poppins leading-tight">
 									A standard <br /> disposable plastic <br /> razor is good for
 									3 to <br /> 10 shaves before it <br /> gets blunt- then off to{" "}
 									<br /> the landfill.
@@ -177,7 +177,7 @@ export default function Danger() {
 						</div>
 					</div>
 				</div>
-				<div className="flex items-center xm:w-full sm:w-full">
+				<div className="flex items-center xm:w-full sm:w-full gap-5">
 					<motion.div
 						variants={workDangerAnimation1}
 						initial="initial"
@@ -189,7 +189,7 @@ export default function Danger() {
 							className="w-[100px] xm:hidden sm:hidden"
 						/>
 					</motion.div>
-					<div className="flex flex-col gap-2">
+					<div className="flex flex-col gap-2 xm:w-full sm:w-full">
 						<div className="flex justify-between items-center">
 							<motion.div
 								variants={workDangerAnimation2}

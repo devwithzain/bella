@@ -28,8 +28,8 @@ const config: Config = {
       xl: { min: "1491px" },
 
       mht: { min: "1024px", max: "1030px" },
-      lht: { min: "1279px", max: "1281px" },
-      xlht: { min: "1366px", max: "1366px" },
+      lht: { min: "1280px", max: "1285px" },
+      xlht: { min: "1366px", max: "1370px" },
       sdht: { min: "1440px", max: "1445px" },
       slr: { min: "1366px", max: "1370px" },
       mdd: { min: "1660px", max: "1670px" },

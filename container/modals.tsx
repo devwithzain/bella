@@ -8,13 +8,13 @@ export default function Modals() {
 
 	return (
 		<div className="w-full padding-x py-10">
-			<div className="w-full items-center justify-center flex flex-col gap-5 pt-20">
+			<div className="w-full items-center justify-center flex flex-col gap-5 xm:flex-col sm:flex-col">
 				<div className="w-full">
 					<h1 className="text-[50px] uppercase font-IBMPlex leading-tight">
 						<TextMask>{phares1}</TextMask>
 					</h1>
 				</div>
-				<div className="w-full flex gap-10 md:flex-col">
+				<div className="w-full flex gap-10 md:flex-col xm:flex-col sm:flex-col">
 					<div className="flex-1 md:flex">
 						<motion.div
 							initial={{ opacity: 0, x: -200 }}
@@ -76,7 +76,7 @@ export default function Modals() {
 								type: "spring",
 							}}
 							viewport={{ once: true }}
-							className="h-[600px]">
+							className="h-[600px]  xm:hidden sm:hidden">
 							<Image
 								src={modal4}
 								alt="modal4"

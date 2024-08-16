@@ -46,15 +46,15 @@ export default function MarketRearch() {
 	return (
 		<div className="w-full padding-x py-10">
 			<div className="w-full h-full justify-between flex gap-5">
-				<div className="w-full flex flex-col gap-10">
-					<h1 className="text-[70px] lg:text-[50px] md:text-[40px] uppercase font-IBMPlex leading-tight">
+				<div className="w-full flex flex-col gap-6">
+					<h1 className="text-[70px] lg:text-[50px] md:text-[40px] xm:text-[30px] sm:text-[30px] uppercase font-IBMPlex leading-tight">
 						<TextMask>{phares1}</TextMask>
 					</h1>
-					<div className="flex flex-col gap-10">
+					<div className="flex flex-col gap-6">
 						<h1 className="text-[25px] uppercase font-IBMPlex leading-tight">
 							<TextMask>{phares2}</TextMask>
 						</h1>
-						<div className="w-full flex">
+						<div className="w-full flex xm:flex-wrap sm:flex-wrap justify-between gap-4">
 							{hotelImgs.map((item) => (
 								<motion.div
 									key={item.id}
@@ -67,7 +67,7 @@ export default function MarketRearch() {
 										type: "spring",
 									}}
 									viewport={{ once: true }}
-									className="w-[75%] flex items-end">
+									className="w-[75%] flex items-end xm:w-[100px] sm:w-[100px]">
 									<Image
 										src={item.scr}
 										alt="hotelImg"
@@ -78,7 +78,7 @@ export default function MarketRearch() {
 						</div>
 					</div>
 				</div>
-				<div className="w-full h-full flex flex-col justify-center items-center gap-10">
+				<div className="w-full h-full flex flex-col justify-center items-center gap-10 xm:hidden sm:hidden">
 					<motion.div
 						initial={{ opacity: 0, x: 200 }}
 						whileInView={{ opacity: 1, x: 0 }}

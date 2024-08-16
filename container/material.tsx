@@ -73,8 +73,8 @@ export default function Mateerial() {
 	const phares2 = ["Paper Pulp, Cellulose, Water"];
 	return (
 		<div className="w-full py-10">
-			<div className="w-full flex justify-between gap-10">
-				<div className="w-[60%] flex padding-x">
+			<div className="w-full flex justify-between gap-10 xm:flex-col-reverse sm:flex-col-reverse">
+				<div className="w-[60%] flex padding-x xm:w-full sm:w-full">
 					<div className="flex items-center gap-5 flex-wrap">
 						{materialImgs.map((item) => (
 							<motion.div
@@ -88,7 +88,7 @@ export default function Mateerial() {
 									type: "spring",
 								}}
 								viewport={{ once: true }}
-								className="w-[180px] lg:w-[150px] md:w-[150px] items-center justify-between gap-5">
+								className="w-[180px] lg:w-[150px] md:w-[150px] xm:w-[100px] sm:w-[100px] items-center justify-between gap-5">
 								<Image
 									src={item.scr}
 									alt="hotelImg"
@@ -98,16 +98,16 @@ export default function Mateerial() {
 						))}
 					</div>
 				</div>
-				<div className="w-[40%] h-full flex justify-end items-end flex-col">
+				<div className="w-[40%] h-full flex justify-end items-end flex-col xm:w-full sm:w-full">
 					<Image
 						src={materialImg}
 						alt="hotelImg"
-						className="w-[500px] object-cover"
+						className="w-[500px] object-cover xm:hidden sm:hidden"
 					/>
-					<h1 className="text-[30px] text-left w-full uppercase font-IBMPlex leading-tight pt-10">
+					<h1 className="text-[30px] text-left w-full uppercase font-IBMPlex leading-tight pt-10  padding-x">
 						<TextMask>{phares1}</TextMask>
 					</h1>
-					<h1 className="text-[20px] text-left w-full font-Poppins leading-tight">
+					<h1 className="text-[20px] text-left w-full font-Poppins leading-tight  padding-x">
 						<TextMask>{phares2}</TextMask>
 					</h1>
 				</div>

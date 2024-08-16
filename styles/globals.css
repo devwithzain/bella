@@ -40,7 +40,7 @@ body {
 		@apply text-[260px] leading-[190px] lht:text-[180px] lht:leading-[135px] mht:text-[150px] mht:leading-[110px] md:text-[150px] md:leading-[100px] sm:text-[100px] sm:leading-[75px] xm:text-[100px] xm:leading-[75px];
 	}
 	.heroImg {
-		@apply w-[200px] lg:w-[135px] mht:w-[140px] slr:w-[110px] md:w-[100px] sm:w-[50px] xm:w-[25px];
+		@apply w-[200px] lg:w-[135px] mht:w-[140px] slr:w-[110px] md:w-[100px] sm:w-[65px] xm:w-[65px];
 	}
 	.padding-x {
 		@apply px-[80px] lg:px-[50px] mht:!px-[50px] md:px-[30px] sm:px-[20px] xm:px-[20px];

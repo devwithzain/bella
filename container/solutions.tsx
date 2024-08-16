@@ -52,7 +52,7 @@ export default function Solutions() {
 					<h1 className="text-[30px] uppercase font-IBMPlex leading-tight">
 						<TextMask>{phares4}</TextMask>
 					</h1>
-					<div className="flex items-center gap-5">
+					<div className="flex items-center gap-5 xm:flex-wrap sm:flex-wrap justify-between">
 						{solutionImg.map((item) => (
 							<motion.div
 								key={item.id}
@@ -65,7 +65,7 @@ export default function Solutions() {
 									type: "spring",
 								}}
 								viewport={{ once: true }}
-								className="w-full items-center justify-between gap-5">
+								className="w-full items-center justify-between gap-5 xm:w-[120px] sm:w-[120px]">
 								<Image
 									src={item.scr}
 									alt="hotelImg"

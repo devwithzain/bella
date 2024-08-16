@@ -257,7 +257,7 @@ export default function Hero() {
 					</div>
 				</div>
 			</div>
-			<div className="w-full flex justify-between gap-5 bg-[#F4F4F4] items-center padding-x py-20 xm:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse">
+			<div className="w-full flex justify-between gap-5 bg-[#F4F4F4] items-center padding-x py-20 xm:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse mht:flex-col-reverse">
 				<motion.div
 					initial={{ opacity: 0, scale: 0.5 }}
 					whileInView={{ opacity: 1, scale: 1 }}
@@ -275,7 +275,7 @@ export default function Hero() {
 				<div className="flex flex-1">
 					<div className="flex flex-col gap-5">
 						<div>
-							<h1 className="text-black text-[95px] td:text-[50px] lg:text-[65px] md:text-[40px] mht:text-[30px] sm:text-[30px] xm:text-[30px] font-semibold font-Poppins leading-tight">
+							<h1 className="text-black text-[85px] mht:text-[60px] td:text-[50px] lg:text-[65px] md:text-[50px] whitespace-nowrap sm:text-[30px] xm:text-[30px] font-semibold font-Poppins leading-tight">
 								<TextMask>{phares1}</TextMask>
 							</h1>
 						</div>

@@ -29,7 +29,7 @@ export default function Render() {
 						<TextMask>{phares1}</TextMask>
 					</h1>
 				</div>
-				<div className="w-[70%] md:w-full flex justify-between items-center gap-10 pt-10">
+				<div className="w-[70%] md:w-full xm:w-full sm:w-full flex justify-between items-center gap-10 xm:flex-col sm:flex-col">
 					<div className="flex-1 hidden xl:flex">
 						<h1 className="text-[18px] font-Poppins leading-tight">
 							<TextMask>{phares2}</TextMask>

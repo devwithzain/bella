@@ -58,7 +58,7 @@ export default function Impact() {
 					<h1 className="text-[30px] uppercase font-IBMPlex leading-tight">
 						<TextMask>{phares2}</TextMask>
 					</h1>
-					<div className="flex items-center gap-5">
+					<div className="w-full flex items-center gap-5 xm:flex-wrap sm:flex-wrap">
 						{impactImg.map((item) => (
 							<motion.div
 								key={item.id}
@@ -71,7 +71,7 @@ export default function Impact() {
 									type: "spring",
 								}}
 								viewport={{ once: true }}
-								className="w-full items-center justify-between gap-5">
+								className="w-full items-center gap-5  xm:w-[100px] sm:w-[100px]">
 								<Image
 									src={item.scr}
 									alt="hotelImg"

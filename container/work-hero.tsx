@@ -36,18 +36,18 @@ export default function WorkHero() {
 			</div>
 			<div className="w-full h-full items-center justify-center flex flex-col gap-5 pt-20">
 				<div className="w-full">
-					<h1 className="text-[150px] lg:text-[100px] md:text-[70px] uppercase font-IBMPlex leading-tight">
+					<h1 className="text-[150px] lg:text-[100px] md:text-[70px] xm:text-[50px] sm:text-[50px] uppercase font-IBMPlex leading-tight">
 						<TextMask>{phares1}</TextMask>
 					</h1>
 				</div>
-				<div className="w-full h-full flex justify-between gap-10 lg:flex-col md:flex-col">
+				<div className="w-full h-full flex justify-between gap-10 lg:flex-col md:flex-col  xm:flex-col sm:flex-col">
 					<motion.div
 						initial={{ opacity: 0, x: -200 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 1, easee: "easeInOut", delay: 0.5 }}
 						viewport={{ once: true }}
-						className="w-[25%] lg:w-full md:w-full">
-						<h1 className="text-[30px] lg:text-[25px] font-Poppins font-medium leading-tight">
+						className="w-[25%] lg:w-full md:w-full xm:w-full sm:w-full">
+						<h1 className="text-[30px] lg:text-[25px] xm:text-[20px] sm:text-[20px] font-Poppins font-medium leading-tight">
 							Introducing our range of biodegradable personal care products and
 							accessories for hotel rooms, designed to reduce environmental
 							impact and promote sustainability in the hospitality industry.
@@ -64,7 +64,7 @@ export default function WorkHero() {
 							type: "spring",
 						}}
 						viewport={{ once: true }}
-						className="w-[75%] lg:w-full md:w-full">
+						className="w-[75%] lg:w-full md:w-full xm:w-full sm:w-full">
 						<Image
 							src={heroImg}
 							alt="heroImg"
