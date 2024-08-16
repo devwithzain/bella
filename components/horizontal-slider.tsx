@@ -101,12 +101,6 @@ export default function HorizontalScrollCarousel() {
 			</section>
 			<div className="hidden xm:flex sm:flex w-full padding-x flex-col gap-5">
 				<div className="flex flex-col gap-5 w-full">
-					<div className="w-full">
-						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight">
-							<TextMask>{phares2}</TextMask>
-							<TextMask>{phares3}</TextMask>
-						</h1>
-					</div>
 					<div>
 						<motion.div
 							initial={{ opacity: 0, scale: 0.5 }}
@@ -123,14 +117,14 @@ export default function HorizontalScrollCarousel() {
 							/>
 						</motion.div>
 					</div>
-				</div>
-				<div className="flex flex-col gap-5 w-full">
 					<div className="w-full">
 						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight">
-							<TextMask>{phares4}</TextMask>
-							<TextMask>{phares5}</TextMask>
+							<TextMask>{phares2}</TextMask>
+							<TextMask>{phares3}</TextMask>
 						</h1>
 					</div>
+				</div>
+				<div className="flex flex-col gap-5 w-full">
 					<div>
 						<motion.div
 							initial={{ opacity: 0, scale: 0.5 }}
@@ -147,14 +141,14 @@ export default function HorizontalScrollCarousel() {
 							/>
 						</motion.div>
 					</div>
-				</div>
-				<div className="flex flex-col gap-5 w-full">
 					<div className="w-full">
 						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight">
-							<TextMask>{phares6}</TextMask>
-							<TextMask>{phares7}</TextMask>
+							<TextMask>{phares4}</TextMask>
+							<TextMask>{phares5}</TextMask>
 						</h1>
 					</div>
+				</div>
+				<div className="flex flex-col gap-5 w-full">
 					<div>
 						<motion.div
 							initial={{ opacity: 0, scale: 0.5 }}
@@ -171,14 +165,14 @@ export default function HorizontalScrollCarousel() {
 							/>
 						</motion.div>
 					</div>
-				</div>
-				<div className="flex flex-col gap-5 w-full">
 					<div className="w-full">
 						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight">
-							<TextMask>{phares8}</TextMask>
-							<TextMask>{phares9}</TextMask>
+							<TextMask>{phares6}</TextMask>
+							<TextMask>{phares7}</TextMask>
 						</h1>
 					</div>
+				</div>
+				<div className="flex flex-col gap-5 w-full">
 					<div>
 						<motion.div
 							initial={{ opacity: 0, scale: 0.5 }}
@@ -195,14 +189,14 @@ export default function HorizontalScrollCarousel() {
 							/>
 						</motion.div>
 					</div>
-				</div>
-				<div className="flex flex-col gap-5 w-full">
 					<div className="w-full">
 						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight">
-							<TextMask>{phares10}</TextMask>
-							<TextMask>{phares11}</TextMask>
+							<TextMask>{phares8}</TextMask>
+							<TextMask>{phares9}</TextMask>
 						</h1>
 					</div>
+				</div>
+				<div className="flex flex-col gap-5 w-full">
 					<div>
 						<motion.div
 							initial={{ opacity: 0, scale: 0.5 }}
@@ -218,6 +212,12 @@ export default function HorizontalScrollCarousel() {
 								height={80}
 							/>
 						</motion.div>
+					</div>
+					<div className="w-full">
+						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight">
+							<TextMask>{phares10}</TextMask>
+							<TextMask>{phares11}</TextMask>
+						</h1>
 					</div>
 				</div>
 			</div>

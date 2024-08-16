@@ -17,7 +17,7 @@ export default function Danger() {
 	return (
 		<div className="w-full padding-x py-10">
 			<div className="w-full h-full flex items-end justify-center gap-10 md:flex-wrap md:items-start md:justify-start xm:flex-col sm:flex-col xm:items-start sm:items-start">
-				<div className="flex gap-5 items-center xm:w-full sm:w-full">
+				<div className="flex gap-5 items-center xm:w-full sm:w-full xm:gap-0 sm:gap-0">
 					<motion.div
 						className="xm:hidden sm:hidden"
 						variants={workDangerAnimation1}
@@ -112,7 +112,7 @@ export default function Danger() {
 						</div>
 					</div>
 				</div>
-				<div className="flex items-center xm:w-full sm:w-full gap-5">
+				<div className="flex items-center xm:w-full sm:w-full gap-5 xm:gap-0 sm:gap-0">
 					<motion.div
 						variants={workDangerAnimation1}
 						initial="initial"
@@ -177,7 +177,7 @@ export default function Danger() {
 						</div>
 					</div>
 				</div>
-				<div className="flex items-center xm:w-full sm:w-full gap-5">
+				<div className="flex items-center xm:w-full sm:w-full gap-5 xm:gap-0 sm:gap-0">
 					<motion.div
 						variants={workDangerAnimation1}
 						initial="initial"
