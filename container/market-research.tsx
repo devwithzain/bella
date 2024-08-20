@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import {
 	hotel1,
@@ -10,110 +11,111 @@ import {
 	hotelImg,
 } from "@/public";
 import { motion } from "framer-motion";
-import { TextMask } from "@/animations";
-
-const hotelImgs = [
-	{
-		id: 1,
-		scr: hotel1,
-	},
-	{
-		id: 2,
-		scr: hotel2,
-	},
-	{
-		id: 3,
-		scr: hotel3,
-	},
-	{
-		id: 4,
-		scr: hotel4,
-	},
-	{
-		id: 5,
-		scr: hotel5,
-	},
-	{
-		id: 6,
-		scr: hotel6,
-	},
-];
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { TworkResearchProps } from "@/types";
 
 export default function MarketRearch() {
-	const phares1 = ["Hotel Amenity Kit", "Market Research"];
-	const phares2 = ["Life cycle:"];
+	const [data, setData] = useState<TworkResearchProps[]>([]);
+	useEffect(() => {
+		async function fetchData() {
+			try {
+				const response = await axios.get("/api/research");
+				setData(response.data);
+			} catch (error) {
+				console.error("Error fetching data:", error);
+			}
+		}
+		fetchData();
+	}, []);
 
 	return (
 		<div className="w-full padding-x py-10">
-			<div className="w-full h-full justify-between flex gap-5">
-				<div className="w-full flex flex-col gap-6">
-					<h1 className="text-[70px] lg:text-[50px] md:text-[40px] xm:text-[30px] sm:text-[30px] uppercase font-IBMPlex leading-tight">
-						<TextMask>{phares1}</TextMask>
-					</h1>
-					<div className="flex flex-col gap-6">
-						<h1 className="text-[25px] uppercase font-IBMPlex leading-tight">
-							<TextMask>{phares2}</TextMask>
+			{data.map((item) => (
+				<div
+					className="w-full h-full justify-between flex gap-5"
+					key={item.id}>
+					<div className="w-full flex flex-col gap-6">
+						<h1 className="text-[70px] lg:text-[50px] md:text-[40px] xm:text-[30px] sm:text-[30px] uppercase font-IBMPlex leading-tight">
+							{item.title}
 						</h1>
-						<div className="w-full flex xm:flex-wrap sm:flex-wrap justify-between gap-4">
-							{hotelImgs.map((item) => (
-								<motion.div
-									key={item.id}
-									initial={{ opacity: 0, x: -100 }}
-									whileInView={{ opacity: 1, x: 0 }}
-									transition={{
-										duration: 1,
-										easee: "easeInOut",
-										delay: item.id * 0.2,
-										type: "spring",
-									}}
-									viewport={{ once: true }}
-									className="w-[75%] flex items-end xm:w-[100px] sm:w-[100px]">
-									<Image
-										src={item.scr}
-										alt="hotelImg"
-										className="w-[80px] h-full"
-									/>
-								</motion.div>
-							))}
+						<div className="flex flex-col gap-6">
+							<h1 className="text-[25px] uppercase font-IBMPlex leading-tight">
+								{item.heading}
+							</h1>
+							<div className="w-full flex xm:flex-wrap sm:flex-wrap justify-between gap-4">
+								{item.images.slice(0, 6).map((img, i) => (
+									<motion.div
+										key={i}
+										initial={{ opacity: 0, x: -100 }}
+										whileInView={{ opacity: 1, x: 0 }}
+										transition={{
+											duration: 1,
+											easee: "easeInOut",
+											delay: i * 0.2,
+											type: "spring",
+										}}
+										viewport={{ once: true }}
+										className="w-[75%] flex items-end xm:w-[100px] sm:w-[100px]">
+										<Image
+											src={img}
+											alt="hotelImg"
+											className="w-[80px] h-full"
+											width={100}
+											height={100}
+										/>
+									</motion.div>
+								))}
+							</div>
 						</div>
 					</div>
+					<div className="w-full h-full flex flex-col-reverse justify-center items-center gap-10 xm:hidden sm:hidden">
+						{item.images.slice(6, 7).map((img, i) => (
+							<motion.div
+								key={i}
+								initial={{ opacity: 0, x: 200 }}
+								whileInView={{ opacity: 1, x: 0 }}
+								transition={{
+									duration: 1,
+									easee: "easeInOut",
+									delay: 0.8,
+									type: "spring",
+								}}
+								viewport={{ once: true }}>
+								<Image
+									src={img}
+									alt="hotelImg"
+									className="w-full h-[150px] object-cover"
+									width={1000}
+									height={600}
+								/>
+							</motion.div>
+						))}
+						{item.images.slice(7).map((img, i) => (
+							<motion.div
+								key={i}
+								initial={{ opacity: 0, x: 200 }}
+								whileInView={{ opacity: 1, x: 0 }}
+								transition={{
+									duration: 1,
+									easee: "easeInOut",
+									delay: 0.8,
+									type: "spring",
+								}}
+								viewport={{ once: true }}
+								className="w-full flex items-center justify-center">
+								<Image
+									src={img}
+									alt="hotelGraph"
+									className="w-[50%] object-cover"
+									width={600}
+									height={600}
+								/>
+							</motion.div>
+						))}
+					</div>
 				</div>
-				<div className="w-full h-full flex flex-col justify-center items-center gap-10 xm:hidden sm:hidden">
-					<motion.div
-						initial={{ opacity: 0, x: 200 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{
-							duration: 1,
-							easee: "easeInOut",
-							delay: 0.8,
-							type: "spring",
-						}}
-						viewport={{ once: true }}>
-						<Image
-							src={hotelImg}
-							alt="hotelImg"
-							className="w-full h-[400px] object-cover"
-						/>
-					</motion.div>
-					<motion.div
-						initial={{ opacity: 0, x: 200 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{
-							duration: 1,
-							easee: "easeInOut",
-							delay: 0.8,
-							type: "spring",
-						}}
-						viewport={{ once: true }}
-						className="w-full flex items-center justify-center">
-						<Image
-							src={hotelGraph}
-							alt="hotelGraph"
-							className="w-[60%] object-cover"
-						/>
-					</motion.div>
-				</div>
-			</div>
+			))}
 		</div>
 	);
 }

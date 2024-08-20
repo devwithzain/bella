@@ -99,8 +99,8 @@ export default function HorizontalScrollCarousel() {
 					</motion.div>
 				</div>
 			</section>
-			<div className="hidden xm:flex sm:flex w-full padding-x flex-col gap-5">
-				<div className="flex flex-col gap-5 w-full">
+			<div className="hidden xm:flex sm:flex w-full padding-x flex-col gap-5 items-center">
+				<div className="flex flex-col gap-5 w-full items-center">
 					<div>
 						<motion.div
 							initial={{ opacity: 0, scale: 0.5 }}
@@ -118,13 +118,13 @@ export default function HorizontalScrollCarousel() {
 						</motion.div>
 					</div>
 					<div className="w-full">
-						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight">
+						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
 							<TextMask>{phares2}</TextMask>
 							<TextMask>{phares3}</TextMask>
 						</h1>
 					</div>
 				</div>
-				<div className="flex flex-col gap-5 w-full">
+				<div className="flex flex-col gap-5 w-full items-center">
 					<div>
 						<motion.div
 							initial={{ opacity: 0, scale: 0.5 }}
@@ -142,13 +142,13 @@ export default function HorizontalScrollCarousel() {
 						</motion.div>
 					</div>
 					<div className="w-full">
-						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight">
+						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
 							<TextMask>{phares4}</TextMask>
 							<TextMask>{phares5}</TextMask>
 						</h1>
 					</div>
 				</div>
-				<div className="flex flex-col gap-5 w-full">
+				<div className="flex flex-col gap-5 w-full items-center">
 					<div>
 						<motion.div
 							initial={{ opacity: 0, scale: 0.5 }}
@@ -166,13 +166,13 @@ export default function HorizontalScrollCarousel() {
 						</motion.div>
 					</div>
 					<div className="w-full">
-						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight">
+						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
 							<TextMask>{phares6}</TextMask>
 							<TextMask>{phares7}</TextMask>
 						</h1>
 					</div>
 				</div>
-				<div className="flex flex-col gap-5 w-full">
+				<div className="flex flex-col gap-5 w-full items-center">
 					<div>
 						<motion.div
 							initial={{ opacity: 0, scale: 0.5 }}
@@ -190,13 +190,13 @@ export default function HorizontalScrollCarousel() {
 						</motion.div>
 					</div>
 					<div className="w-full">
-						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight">
+						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
 							<TextMask>{phares8}</TextMask>
 							<TextMask>{phares9}</TextMask>
 						</h1>
 					</div>
 				</div>
-				<div className="flex flex-col gap-5 w-full">
+				<div className="flex flex-col gap-5 w-full items-center">
 					<div>
 						<motion.div
 							initial={{ opacity: 0, scale: 0.5 }}
@@ -214,7 +214,7 @@ export default function HorizontalScrollCarousel() {
 						</motion.div>
 					</div>
 					<div className="w-full">
-						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight">
+						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
 							<TextMask>{phares10}</TextMask>
 							<TextMask>{phares11}</TextMask>
 						</h1>

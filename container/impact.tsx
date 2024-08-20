@@ -1,87 +1,84 @@
+"use client";
+import axios from "axios";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { TextMask } from "@/animations";
-import { impact1, impact2, impact3, impact4, impact5, impact } from "@/public";
-
-const impactImg = [
-	{
-		id: 1,
-		scr: impact1,
-	},
-	{
-		id: 2,
-		scr: impact2,
-	},
-	{
-		id: 3,
-		scr: impact3,
-	},
-	{
-		id: 4,
-		scr: impact4,
-	},
-	{
-		id: 5,
-		scr: impact5,
-	},
-];
+import { useEffect, useState } from "react";
+import { TworkImpactProps } from "@/types";
 
 export default function Impact() {
-	const phares1 = ["The Big Picture"];
-	const phares2 = ["The Victims"];
+	const [data, setData] = useState<TworkImpactProps[]>([]);
+	useEffect(() => {
+		async function fetchData() {
+			try {
+				const response = await axios.get("/api/impact");
+				setData(response.data);
+			} catch (error) {
+				console.error("Error fetching data:", error);
+			}
+		}
+		fetchData();
+	}, []);
 
 	return (
 		<div className="w-full pb-10 padding-x">
-			<div className="w-full h-full items-center justify-center flex flex-col gap-10">
-				<div className="w-full flex flex-col gap-10">
-					<h1 className="text-[30px] uppercase font-IBMPlex leading-tight">
-						<TextMask>{phares1}</TextMask>
-					</h1>
-					<motion.div
-						initial={{ opacity: 0, x: 200 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{
-							duration: 1,
-							easee: "easeInOut",
-							delay: 0.8,
-							type: "spring",
-						}}
-						viewport={{ once: true }}>
-						<Image
-							src={impact}
-							alt="impact"
-							className="w-full h-full object-cover"
-						/>
-					</motion.div>
-				</div>
-				<div className="w-full flex flex-col gap-10">
-					<h1 className="text-[30px] uppercase font-IBMPlex leading-tight">
-						<TextMask>{phares2}</TextMask>
-					</h1>
-					<div className="w-full flex items-center gap-5 xm:flex-wrap sm:flex-wrap">
-						{impactImg.map((item) => (
-							<motion.div
-								key={item.id}
-								initial={{ opacity: 0, x: -100 }}
-								whileInView={{ opacity: 1, x: 0 }}
-								transition={{
-									duration: 1,
-									easee: "easeInOut",
-									delay: item.id * 0.3,
-									type: "spring",
-								}}
-								viewport={{ once: true }}
-								className="w-full items-center gap-5  xm:w-[100px] sm:w-[100px]">
-								<Image
-									src={item.scr}
-									alt="hotelImg"
-									className="w-[200px] object-cover"
-								/>
-							</motion.div>
-						))}
+			{data.map((item) => (
+				<div
+					className="w-full h-full items-center justify-center flex flex-col gap-10"
+					key={item.id}>
+					<div className="w-full flex flex-col gap-10">
+						<h1 className="text-[30px] uppercase font-IBMPlex leading-tight">
+							{item.title}
+						</h1>
+						<motion.div
+							initial={{ opacity: 0, x: 200 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							transition={{
+								duration: 1,
+								easee: "easeInOut",
+								delay: 0.8,
+								type: "spring",
+							}}
+							viewport={{ once: true }}>
+							<Image
+								src={item.imageUrl}
+								alt="impact"
+								className="w-full h-full object-cover"
+								width={1200}
+								height={1200}
+							/>
+						</motion.div>
+					</div>
+					<div className="w-full flex flex-col gap-10">
+						<h1 className="text-[30px] uppercase font-IBMPlex leading-tight">
+							{item.heading}
+						</h1>
+						<div className="w-full flex items-center gap-5 xm:flex-wrap sm:flex-wrap">
+							{item.images.map((img, i) => (
+								<motion.div
+									key={i}
+									initial={{ opacity: 0, x: -100 }}
+									whileInView={{ opacity: 1, x: 0 }}
+									transition={{
+										duration: 1,
+										easee: "easeInOut",
+										delay: i * 0.3,
+										type: "spring",
+									}}
+									viewport={{ once: true }}
+									className="w-full items-center gap-5  xm:w-[100px] sm:w-[100px]">
+									<Image
+										src={img}
+										alt="hotelImg"
+										className="w-[200px] object-cover"
+										width={200}
+										height={200}
+									/>
+								</motion.div>
+							))}
+						</div>
 					</div>
 				</div>
-			</div>
+			))}
 		</div>
 	);
 }
