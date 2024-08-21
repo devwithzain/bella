@@ -16,6 +16,32 @@ export type TmodalProps = {
    }[];
 };
 
+export type TpageAboutProps = {
+   id: string;
+   title: string;
+   paragraph1: string;
+   paragraph2: string;
+   paragraph3: string;
+   paragraph4: string;
+   imageUrl: string;
+};
+
+export type TpageSkillsProps = {
+   id: string;
+   title: string;
+   heading1: string;
+   heading2: string;
+   heading3: string;
+   heading4: string;
+   heading5: string;
+   skillNo1: string;
+   skillNo2: string;
+   skillNo3: string;
+   skillNo4: string;
+   skillNo5: string;
+   images: string[];
+};
+
 export type TworkHeroProps = {
    id: string;
    title: string;

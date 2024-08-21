@@ -1,15 +1,9 @@
 "use client";
+import { PreLoad } from "@/animations";
 import Lenis from "@studio-freight/lenis";
 import { useEffect, useState } from "react";
-import {
-	DesignsSlider,
-	Footer,
-	Hero,
-	HorizontalSlider,
-	Portfolio,
-} from "@/components";
 import { AnimatePresence } from "framer-motion";
-import { PreLoad } from "@/animations";
+import { Footer, Hero, HorizontalSlider } from "@/components";
 
 export default function App() {
 	const [isLoading, setIsLoading] = useState(true);

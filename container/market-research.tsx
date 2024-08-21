@@ -1,18 +1,8 @@
 "use client";
+import axios from "axios";
 import Image from "next/image";
-import {
-	hotel1,
-	hotel2,
-	hotel3,
-	hotel4,
-	hotel5,
-	hotel6,
-	hotelGraph,
-	hotelImg,
-} from "@/public";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { TworkResearchProps } from "@/types";
 
 export default function MarketRearch() {

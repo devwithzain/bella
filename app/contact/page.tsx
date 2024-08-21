@@ -1,8 +1,8 @@
 "use client";
+import Link from "next/link";
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import { ContactPage, Footer } from "@/components";
-import Link from "next/link";
 
 export default function Contact() {
 	useEffect(() => {

@@ -1,24 +1,24 @@
 "use client";
+import axios from "axios";
 import Link from "next/link";
 import Image from "next/image";
-import { aboutImg } from "@/public";
 import { motion } from "framer-motion";
-import { TextMask } from "@/animations";
+import { TpageAboutProps } from "@/types";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
-	const phares1 = ["Welcome To My", "Creative Journey!"];
-	const phares2 = [
-		"Hi, I'm Bella! I graduated from Parsons School of Design with a major in Product Design and a minor in Communication Design. My curiosity about how things work has been a driving force behind my passion for creating and innovating new objects.",
-	];
-	const phares3 = [
-		"I thrive on the challenge of taking abstract ideas and transforming them into tangible, finished products that people can use and enjoy. Whether it's experimenting with different materials, exploring new design techniques, or collaborating with others, I'm always eager to push the boundaries of what's possible in design.",
-	];
-	const phares4 = [
-		"Design, for me, is more than just a career—it's a journey of continuous learning and growth. I'm constantly seeking new challenges and opportunities to expand my skills and bring fresh, exciting ideas to life.",
-	];
-	const phares5 = [
-		"Thank you for visiting my page, and I look forward to connecting with you!",
-	];
+	const [data, setData] = useState<TpageAboutProps[]>([]);
+	useEffect(() => {
+		async function fetchData() {
+			try {
+				const response = await axios.get("/api/about");
+				setData(response.data);
+			} catch (error) {
+				console.error("Error fetching data:", error);
+			}
+		}
+		fetchData();
+	}, []);
 
 	return (
 		<>
@@ -257,45 +257,49 @@ export default function Hero() {
 					</div>
 				</div>
 			</div>
-			<div className="w-full flex justify-between gap-5 bg-[#F4F4F4] items-center padding-x py-20 xm:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse mht:flex-col-reverse">
-				<motion.div
-					initial={{ opacity: 0, scale: 0.5 }}
-					whileInView={{ opacity: 1, scale: 1 }}
-					transition={{ duration: 0.5, ease: "easeInOut" }}
-					viewport={{ once: true }}
-					className="flex flex-1 items-center justify-center">
-					<Image
-						src={aboutImg}
-						alt="aboutImg"
-						width={800}
-						height={400}
-						className="w-[80%] h-[80%] object-cover"
-					/>
-				</motion.div>
-				<div className="flex flex-1">
-					<div className="flex flex-col gap-5">
-						<div>
-							<h1 className="text-black text-[85px] mht:text-[60px] td:text-[50px] lg:text-[65px] md:text-[50px] whitespace-nowrap sm:text-[30px] xm:text-[30px] font-semibold font-Poppins leading-tight">
-								<TextMask>{phares1}</TextMask>
-							</h1>
-						</div>
+			{data.map((item) => (
+				<div
+					className="w-full flex justify-between gap-5 bg-[#F4F4F4] items-center padding-x py-20 xm:flex-col-reverse sm:flex-col-reverse md:flex-col-reverse mht:flex-col-reverse"
+					key={item.id}>
+					<motion.div
+						initial={{ opacity: 0, scale: 0.5 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{ duration: 0.5, ease: "easeInOut" }}
+						viewport={{ once: true }}
+						className="flex w-1/2 items-center justify-center xm:w-full sm:w-full">
+						<Image
+							src={item.imageUrl}
+							alt="aboutImg"
+							width={800}
+							height={400}
+							className="w-[80%] xm:w-full sm:w-full object-cover"
+						/>
+					</motion.div>
+					<div className="flex w-1/2	 xm:w-full sm:w-full">
 						<div className="flex flex-col gap-5">
-							<p className="text-black text-[24px] td:text-[16px] lg:text-[20px] xm:text-[18px] sm:text-[18px] mht:text-[16px] leading-tight font-normal font-Poppins">
-								<TextMask>{phares2}</TextMask>
-							</p>
-							<p className="text-black text-[24px] td:text-[16px] lg:text-[20px] xm:text-[18px] mht:text-[16px] leading-tight font-normal font-Poppins">
-								<TextMask>{phares3}</TextMask>
-							</p>
-							<p className="text-black text-[24px] td:text-[16px] lg:text-[20px] xm:text-[18px] mht:text-[16px] leading-tight font-normal font-Poppins">
-								<TextMask>{phares4}</TextMask>
-							</p>
-							<p className="text-black text-[24px] td:text-[16px] lg:text-[20px] xm:text-[18px] mht:text-[16px] leading-tight font-normal font-Poppins">
-								<TextMask>{phares5}</TextMask>
-							</p>
+							<div>
+								<h1 className="text-black text-[85px] mht:text-[60px] td:text-[50px] lg:text-[65px] md:text-[50px] sm:text-[30px] xm:text-[30px] font-semibold font-Poppins leading-tight">
+									{item.title}
+								</h1>
+							</div>
+							<div className="flex flex-col gap-5">
+								<p className="text-black text-[24px] td:text-[16px] lg:text-[20px] xm:text-[18px] sm:text-[18px] mht:text-[16px] leading-tight font-normal font-Poppins">
+									{item.paragraph1}
+								</p>
+								<p className="text-black text-[24px] td:text-[16px] lg:text-[20px] xm:text-[18px] mht:text-[16px] leading-tight font-normal font-Poppins">
+									{item.paragraph2}
+								</p>
+								<p className="text-black text-[24px] td:text-[16px] lg:text-[20px] xm:text-[18px] mht:text-[16px] leading-tight font-normal font-Poppins">
+									{item.paragraph3}
+								</p>
+								<p className="text-black text-[24px] td:text-[16px] lg:text-[20px] xm:text-[18px] mht:text-[16px] leading-tight font-normal font-Poppins">
+									{item.paragraph4}
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			))}
 		</>
 	);
 }

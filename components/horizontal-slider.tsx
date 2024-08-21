@@ -1,18 +1,25 @@
 "use client";
+import axios from "axios";
 import Card from "./card";
-import { useEffect, useRef } from "react";
-import { motion, useTransform, useScroll } from "framer-motion";
-import { TextMask } from "@/animations";
 import Image from "next/image";
-import {
-	afterEffect,
-	autodesk,
-	illustration,
-	indesign,
-	photoshop,
-} from "@/public";
+import { TpageSkillsProps } from "@/types";
+import { useEffect, useRef, useState } from "react";
+import { motion, useTransform, useScroll } from "framer-motion";
 
 export default function HorizontalScrollCarousel() {
+	const [data, setData] = useState<TpageSkillsProps[]>([]);
+	useEffect(() => {
+		async function fetchData() {
+			try {
+				const response = await axios.get("/api/skills");
+				setData(response.data);
+			} catch (error) {
+				console.error("Error fetching data:", error);
+			}
+		}
+		fetchData();
+	}, []);
+
 	const targetRef = useRef<HTMLDivElement | null>(null);
 	const { scrollYProgress } = useScroll({
 		target: targetRef,
@@ -59,18 +66,6 @@ export default function HorizontalScrollCarousel() {
 
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
-
-	const phares1 = [`My \n Skills`];
-	const phares2 = ["01"];
-	const phares3 = [`Fusion \n 360`];
-	const phares4 = ["02"];
-	const phares5 = ["After Effect"];
-	const phares6 = ["03"];
-	const phares7 = ["Illustrator"];
-	const phares8 = ["04"];
-	const phares9 = ["Phtoshop"];
-	const phares10 = ["05"];
-	const phares11 = ["Indesign"];
 	return (
 		<>
 			<section
@@ -99,128 +94,152 @@ export default function HorizontalScrollCarousel() {
 					</motion.div>
 				</div>
 			</section>
-			<div className="hidden xm:flex sm:flex w-full padding-x flex-col gap-5 items-center">
-				<div className="flex flex-col gap-5 w-full items-center">
-					<div>
-						<motion.div
-							initial={{ opacity: 0, scale: 0.5 }}
-							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 0.5, ease: "easeInOut" }}
-							viewport={{ once: true }}
-							className="w-[150px] h-[150px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] mht:w-[200px] mht:h-[200px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#bbb0d2] flex items-center justify-center bg-primary z-50">
-							<Image
-								className="w-[80px]"
-								src={autodesk}
-								alt="Image"
-								width={80}
-								height={80}
-							/>
-						</motion.div>
+			{data.map((item) => (
+				<div
+					className="hidden xm:flex sm:flex w-full padding-x flex-col gap-5 items-center"
+					key={item.id}>
+					<div className="flex flex-col gap-5 w-full items-center">
+						{item.images.slice(0, 1).map((img, i) => (
+							<div key={i}>
+								<motion.div
+									initial={{ opacity: 0, scale: 0.5 }}
+									whileInView={{ opacity: 1, scale: 1 }}
+									transition={{ duration: 0.5, ease: "easeInOut" }}
+									viewport={{ once: true }}
+									className="w-[150px] h-[150px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] mht:w-[200px] mht:h-[200px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#bbb0d2] flex items-center justify-center bg-primary z-50">
+									<Image
+										className="w-[80px]"
+										src={img}
+										alt="Image"
+										width={80}
+										height={80}
+									/>
+								</motion.div>
+							</div>
+						))}
+						<div className="w-full flex flex-col">
+							<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
+								{item.skillNo1}
+							</h1>
+							<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
+								{item.heading1}
+							</h1>
+						</div>
 					</div>
-					<div className="w-full">
-						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
-							<TextMask>{phares2}</TextMask>
-							<TextMask>{phares3}</TextMask>
-						</h1>
+					<div className="flex flex-col gap-5 w-full items-center">
+						{item.images.slice(1, 2).map((img, i) => (
+							<div key={i}>
+								<motion.div
+									initial={{ opacity: 0, scale: 0.5 }}
+									whileInView={{ opacity: 1, scale: 1 }}
+									transition={{ duration: 0.5, ease: "easeInOut" }}
+									viewport={{ once: true }}
+									className="w-[150px] h-[150px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] mht:w-[200px] mht:h-[200px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#bbb0d2] flex items-center justify-center bg-primary z-50">
+									<Image
+										className="w-[80px]"
+										src={img}
+										alt="Image"
+										width={80}
+										height={80}
+									/>
+								</motion.div>
+							</div>
+						))}
+						<div className="w-full flex flex-col">
+							<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
+								{item.skillNo2}
+							</h1>
+							<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
+								{item.heading2}
+							</h1>
+						</div>
+					</div>
+					<div className="flex flex-col gap-5 w-full items-center">
+						{item.images.slice(2, 3).map((img, i) => (
+							<div key={i}>
+								<motion.div
+									initial={{ opacity: 0, scale: 0.5 }}
+									whileInView={{ opacity: 1, scale: 1 }}
+									transition={{ duration: 0.5, ease: "easeInOut" }}
+									viewport={{ once: true }}
+									className="w-[150px] h-[150px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] mht:w-[200px] mht:h-[200px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#bbb0d2] flex items-center justify-center bg-primary z-50">
+									<Image
+										className="w-[80px]"
+										src={img}
+										alt="Image"
+										width={80}
+										height={80}
+									/>
+								</motion.div>
+							</div>
+						))}
+						<div className="w-full flex flex-col">
+							<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
+								{item.skillNo3}
+							</h1>
+							<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
+								{item.heading3}
+							</h1>
+						</div>
+					</div>
+					<div className="flex flex-col gap-5 w-full items-center">
+						{item.images.slice(3, 4).map((img, i) => (
+							<div key={i}>
+								<motion.div
+									initial={{ opacity: 0, scale: 0.5 }}
+									whileInView={{ opacity: 1, scale: 1 }}
+									transition={{ duration: 0.5, ease: "easeInOut" }}
+									viewport={{ once: true }}
+									className="w-[150px] h-[150px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] mht:w-[200px] mht:h-[200px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#bbb0d2] flex items-center justify-center bg-primary z-50">
+									<Image
+										className="w-[80px]"
+										src={img}
+										alt="Image"
+										width={80}
+										height={80}
+									/>
+								</motion.div>
+							</div>
+						))}
+						<div className="w-full flex flex-col">
+							<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
+								{item.skillNo4}
+							</h1>
+							<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
+								{item.heading4}
+							</h1>
+						</div>
+					</div>
+					<div className="flex flex-col gap-5 w-full items-center">
+						{item.images.slice(4).map((img, i) => (
+							<div key={i}>
+								<motion.div
+									initial={{ opacity: 0, scale: 0.5 }}
+									whileInView={{ opacity: 1, scale: 1 }}
+									transition={{ duration: 0.5, ease: "easeInOut" }}
+									viewport={{ once: true }}
+									className="w-[150px] h-[150px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] mht:w-[200px] mht:h-[200px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#bbb0d2] flex items-center justify-center bg-primary z-50">
+									<Image
+										className="w-[80px]"
+										src={img}
+										alt="Image"
+										width={80}
+										height={80}
+									/>
+								</motion.div>
+							</div>
+						))}
+						<div className="w-full flex flex-col">
+							<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
+								{item.skillNo5}
+							</h1>
+							<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
+								{item.heading5}
+							</h1>
+						</div>
 					</div>
 				</div>
-				<div className="flex flex-col gap-5 w-full items-center">
-					<div>
-						<motion.div
-							initial={{ opacity: 0, scale: 0.5 }}
-							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 0.5, ease: "easeInOut" }}
-							viewport={{ once: true }}
-							className="w-[150px] h-[150px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] mht:w-[200px] mht:h-[200px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#bbb0d2] flex items-center justify-center bg-primary z-50">
-							<Image
-								className="w-[80px]"
-								src={afterEffect}
-								alt="Image"
-								width={80}
-								height={80}
-							/>
-						</motion.div>
-					</div>
-					<div className="w-full">
-						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
-							<TextMask>{phares4}</TextMask>
-							<TextMask>{phares5}</TextMask>
-						</h1>
-					</div>
-				</div>
-				<div className="flex flex-col gap-5 w-full items-center">
-					<div>
-						<motion.div
-							initial={{ opacity: 0, scale: 0.5 }}
-							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 0.5, ease: "easeInOut" }}
-							viewport={{ once: true }}
-							className="w-[150px] h-[150px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] mht:w-[200px] mht:h-[200px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#bbb0d2] flex items-center justify-center bg-primary z-50">
-							<Image
-								className="w-[80px]"
-								src={illustration}
-								alt="Image"
-								width={80}
-								height={80}
-							/>
-						</motion.div>
-					</div>
-					<div className="w-full">
-						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
-							<TextMask>{phares6}</TextMask>
-							<TextMask>{phares7}</TextMask>
-						</h1>
-					</div>
-				</div>
-				<div className="flex flex-col gap-5 w-full items-center">
-					<div>
-						<motion.div
-							initial={{ opacity: 0, scale: 0.5 }}
-							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 0.5, ease: "easeInOut" }}
-							viewport={{ once: true }}
-							className="w-[150px] h-[150px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] mht:w-[200px] mht:h-[200px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#bbb0d2] flex items-center justify-center bg-primary z-50">
-							<Image
-								className="w-[80px]"
-								src={photoshop}
-								alt="Image"
-								width={80}
-								height={80}
-							/>
-						</motion.div>
-					</div>
-					<div className="w-full">
-						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
-							<TextMask>{phares8}</TextMask>
-							<TextMask>{phares9}</TextMask>
-						</h1>
-					</div>
-				</div>
-				<div className="flex flex-col gap-5 w-full items-center">
-					<div>
-						<motion.div
-							initial={{ opacity: 0, scale: 0.5 }}
-							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 0.5, ease: "easeInOut" }}
-							viewport={{ once: true }}
-							className="w-[150px] h-[150px] td:w-[200px] td:h-[200px] lg:w-[250px] lg:h-[250px] mht:w-[200px] mht:h-[200px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#bbb0d2] flex items-center justify-center bg-primary z-50">
-							<Image
-								className="w-[80px]"
-								src={indesign}
-								alt="Image"
-								width={80}
-								height={80}
-							/>
-						</motion.div>
-					</div>
-					<div className="w-full">
-						<h1 className="text-[120px] tracking-tighter mdd:text-[100px] xlht:text-[70px] lht:text-[60px] td:text-[60px] lg:text-[80px] mht:text-[40px] md:text-[50px] sm:text-[40px] xm:text-[40px] font-IBMPlex font-extrabold uppercase text-[#1F201D] leading-tight text-center">
-							<TextMask>{phares10}</TextMask>
-							<TextMask>{phares11}</TextMask>
-						</h1>
-					</div>
-				</div>
-			</div>
+			))}
 		</>
 	);
 }
