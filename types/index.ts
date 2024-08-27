@@ -1,3 +1,4 @@
+import * as z from "zod";
 import { StaticImageData } from "next/image";
 
 export type TlogoMarqueeProps = {
@@ -24,6 +25,33 @@ export type TpageAboutProps = {
    paragraph3: string;
    paragraph4: string;
    imageUrl: string;
+};
+
+export type TpageContactProps = {
+   id: string;
+   title: string;
+   heading: string;
+};
+
+export type TpageContactFormProps = {
+   id: string;
+   title: string;
+   paragraph: string;
+};
+
+export const contactFormSchema = z.object({
+   name: z.string(),
+   email: z.string().email(),
+   phone: z.string(),
+   message: z.string(),
+});
+
+export type TcontactFormData = z.infer<typeof contactFormSchema>;
+
+
+export type TpageContactResumeProps = {
+   id: string;
+   resume: string;
 };
 
 export type TpageSkillsProps = {
