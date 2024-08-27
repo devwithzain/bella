@@ -1,8 +1,8 @@
 "use client";
 import axios from "axios";
+import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 import { TextMask } from "@/animations";
-import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactFormSchema, TcontactFormData } from "@/types";
@@ -26,12 +26,11 @@ export default function Form() {
 		try {
 			await axios.post("/api/send", data);
 		} catch (error: any) {
-			toast.success("Something went wrong!", error);
+			toast.error("Something went wrong!", error);
 		} finally {
 			toast.success("Thanks for contacting me!");
 			reset();
 		}
-		console.log(data);
 	};
 	return (
 		<form
