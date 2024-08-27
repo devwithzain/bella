@@ -2,17 +2,16 @@ import { Resend } from 'resend';
 import { NextResponse } from "next/server";
 import { EmailTemplate } from "@/components";
 
-const resend = new Resend('process.env.RESEND_API_KEY');
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
    try {
       const body = await request.json();
-      console.log("API", body);
       const { name, email } = body;
       const { data, error } = await resend.emails.send({
          from: 'onboarding@resend.dev',
          to: email,
-         subject: 'Hi, ${name}',
+         subject: 'This is Bella Han',
          react: EmailTemplate({ firstName: name }),
       });
 
