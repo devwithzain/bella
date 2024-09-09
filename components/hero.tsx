@@ -22,7 +22,7 @@ export default function Hero() {
 
 	return (
 		<>
-			<div className="w-full h-screen padding-x py-10 sm:h-[50vh] xm:h-[50vh] bg-[#bbb0d2] flex items-center justify-center">
+			<div className="w-full h-screen padding-x sm:h-[50vh] xm:h-[50vh] bg-[#bbb0d2] flex items-center justify-center">
 				<div className="flex flex-col gap-2">
 					<div className="w-fit h-fit items-start justify-start flex flex-col gap-2">
 						<div className="w-fit">
